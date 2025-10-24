@@ -52,6 +52,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Menu() {
   //   const isMobile = useIsMobile();
+  console.log("test");
 
   return (
     // <NavigationMenu viewport={isMobile}>
