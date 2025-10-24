@@ -1,13 +1,10 @@
-import { Button } from "@/components/ui/button";
+import { Menu } from "./components/Menu";
 
 function App() {
   return (
     <>
-      <div className="text-red-500 bg-amber-500 h-[300px] w-full flex flex-col justify-center items-center">
-        <div className="flex w-[100px] flex-col justify-center items-center">
-          Bestwater
-          <Button>Click me</Button>
-        </div>
+      <div className="flex w-full justify-center align-center h-24">
+        <Menu />
       </div>
     </>
   );
