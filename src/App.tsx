@@ -1,15 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { Button } from "@/components/ui/button";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  console.log("test commit");
-
   return (
     <>
-      <div className="text-red-500 bg-amber-500 h-fit w-full flex justify-center">
-        Bestwater
+      <div className="text-red-500 bg-amber-500 h-[300px] w-full flex flex-col justify-center items-center">
+        <div className="flex w-[100px] flex-col justify-center items-center">
+          Bestwater
+          <Button>Click me</Button>
+        </div>
       </div>
     </>
   );
