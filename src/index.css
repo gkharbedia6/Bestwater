@@ -1,5 +1,9 @@
+@import "../public//assets/styles/_fonts.css";
+
 @import "tailwindcss";
 @import "tw-animate-css";
+
+@source "./index.html", "./src/**/*.{js,jsx,ts,tsx}";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -108,7 +112,10 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --font-ge: "BPGNino", sans-serif;
+  --font-en-ru: "Lora", sans-serif;
 }
+
 
 @layer base {
   * {
@@ -118,4 +125,12 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@utility font-ge {
+  font-family: "BPGNino", sans-serif;
+}
+
+@utility font-en-ru {
+  font-family: "Lora", sans-serif;
 }

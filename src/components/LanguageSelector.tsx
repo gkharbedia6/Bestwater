@@ -8,7 +8,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 function LanguageSelector() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const languagePreference = localStorage.getItem("i18nextLng");
 
@@ -26,24 +26,21 @@ function LanguageSelector() {
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="ge">
-          <span>ქა</span>
-          {/* <span>ქართული</span> */}
+          <span className="mt-1 font-ge">ქართული</span>
           <img
             src="/assets/icons/language/lang_ge.png"
             alt="Georgian Language Icon"
           />
         </SelectItem>
         <SelectItem value="en">
-          {/* <span>English</span> */}
-          <span>En</span>
+          <span className="font-en-ru font-semibold">English</span>
           <img
             src="/assets/icons/language/lang_en.png"
             alt="English Language Icon"
           />
         </SelectItem>
         <SelectItem value="ru">
-          {/* <span>Русский</span> */}
-          <span>Ру</span>
+          <span className="font-en-ru font-semibold">Русский</span>
           <img
             src="/assets/icons/language/lang_ru.png"
             alt="Russian Language Icon"

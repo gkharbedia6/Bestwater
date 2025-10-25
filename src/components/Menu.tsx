@@ -68,9 +68,7 @@ function Menu() {
               asChild
               className={navigationMenuTriggerStyle()}
             >
-              <Link className="font-bold" to="/">
-                {t("Menu.home.title")}
-              </Link>
+              <Link to="/">{t("Menu.home.title")}</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           {/* <NavigationMenuItem>
