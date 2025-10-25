@@ -1,7 +1,18 @@
 {
   "Menu": {
-    "home": "Home",
-    "filters": "Filters",
+    "home": {
+      "title": "Home"
+    },
+    "filters": {
+      "title": "Filters",
+      "items": {
+        "home_water": "წყლის მემბრანული ფილტრები მთლიანად კერძო სახლისა და აგარაკებისათვის",
+        "home_wine": "საოჯახო მარნებისათვის ღვინის მემბრანული ფილტრები",
+        "industry_water": "სასმელი და მინერალური წყლის საწარმოო, მემბრანული ფილტრები",
+        "industry_wine": "ღვინის საწარმოო, მემბრანული ფილტრები",
+        "industry_vodka": "არყის და კონიაკის საწარმოო მემბრანული ფილტრები"
+      }
+    },
     "science": "Science",
     "technology": "Technology",
     "contant": "Contact"

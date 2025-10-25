@@ -68,7 +68,9 @@ function Menu() {
               asChild
               className={navigationMenuTriggerStyle()}
             >
-              <Link to="/">{t("Menu.home.title")}</Link>
+              <Link className="font-bold" to="/">
+                {t("Menu.home.title")}
+              </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           {/* <NavigationMenuItem>
@@ -109,9 +111,11 @@ function Menu() {
             <NavigationMenuContent>
               <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {Object.entries(filtersMenuItems).map(([key, menuItem]) => (
-                  <ListItem key={key} title={menuItem} href={"/home-water"}>
-                    {/* {menuItem} */}
-                  </ListItem>
+                  <ListItem
+                    key={key}
+                    title={menuItem}
+                    href={"/home-water"}
+                  ></ListItem>
                 ))}
               </ul>
             </NavigationMenuContent>
@@ -211,7 +215,7 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink asChild>
         <a href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
+          <div className="text-sm leading-snug font-medium">{title}</div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
