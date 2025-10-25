@@ -1,5 +1,6 @@
 import * as React from "react";
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // import { useIsMobile } from "@/hooks/use-mobile";
 import {
@@ -54,7 +55,8 @@ const components: { title: string; href: string; description: string }[] = [
 function Menu() {
   //   const isMobile = useIsMobile();
 
-  const { t } = useTranslation("Menu");
+  const { t } = useTranslation();
+  const filtersMenuItems = t("Menu.filters.items", { returnObjects: true });
 
   return (
     // <NavigationMenu viewport={isMobile}>
@@ -66,10 +68,10 @@ function Menu() {
               asChild
               className={navigationMenuTriggerStyle()}
             >
-              <a href="/">{t("home")}</a>
+              <Link to="/">{t("Menu.home.title")}</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <NavigationMenuTrigger>Some</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -99,18 +101,16 @@ function Menu() {
                 </ListItem>
               </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+            <NavigationMenuTrigger>
+              {t("Menu.filters.title")}
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
+                {Object.entries(filtersMenuItems).map(([key, menuItem]) => (
+                  <ListItem key={key} title={menuItem} href={"/home-water"}>
+                    {/* {menuItem} */}
                   </ListItem>
                 ))}
               </ul>
