@@ -11,6 +11,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { useTranslation } from "react-i18next";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -53,13 +54,23 @@ const components: { title: string; href: string; description: string }[] = [
 function Menu() {
   //   const isMobile = useIsMobile();
 
+  const { t } = useTranslation("Menu");
+
   return (
     // <NavigationMenu viewport={isMobile}>
     <nav className="flex justify-center items-center ">
       <NavigationMenu>
         <NavigationMenuList className="flex-wrap">
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+            <NavigationMenuLink
+              asChild
+              className={navigationMenuTriggerStyle()}
+            >
+              <a href="/">{t("home")}</a>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Some</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -105,14 +116,7 @@ function Menu() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={navigationMenuTriggerStyle()}
-            >
-              <a href="/docs">Docs</a>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
+
           <NavigationMenuItem className="hidden md:block">
             <NavigationMenuTrigger>List</NavigationMenuTrigger>
             <NavigationMenuContent>

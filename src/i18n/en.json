@@ -1,4 +1,9 @@
 {
-  "welcome": "Welcome to BestWater",
-  "contact": "Contact Us"
+  "Menu": {
+    "home": "Home",
+    "filters": "Filters",
+    "science": "Science",
+    "technology": "Technology",
+    "contant": "Contact"
+  }
 }

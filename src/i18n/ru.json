@@ -1,4 +1,9 @@
 {
-  "welcome": "Добро пожаловать в BestWater",
-  "contact": "Связаться с нами"
+  "Menu": {
+    "home": "Главная",
+    "home_filters": "Фильтры",
+    "industrial_filters": "Наука",
+    "technology": "Технология",
+    "contact": "Контакт"
+  }
 }

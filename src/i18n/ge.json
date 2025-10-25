@@ -1,4 +1,9 @@
 {
-  "welcome": "მოგესალმებით BestWater-ში",
-  "contact": "დაგვიკავშირდით"
+  "Menu": {
+    "home": "მთავარი",
+    "home_filters": "ფილტრები",
+    "industrial_filters": "მეცნიერება",
+    "technology": "ტექნოლოგია",
+    "contact": "კონტაქტი"
+  }
 }

@@ -12,8 +12,6 @@ function LanguageSelector() {
 
   const languagePreference = localStorage.getItem("i18nextLng");
 
-  console.log(languagePreference);
-
   const switchLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
   };
@@ -26,7 +24,7 @@ function LanguageSelector() {
       <SelectTrigger className="w-fit">
         <SelectValue />
       </SelectTrigger>
-      <SelectContent onChange={(e) => console.log("some")}>
+      <SelectContent>
         <SelectItem value="ge">
           <span>ქა</span>
           {/* <span>ქართული</span> */}
