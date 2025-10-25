@@ -1,23 +1,30 @@
-import { Menu } from "@/components/Menu";
-import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
+import Menu from "@/components/Menu";
+import LanguageSelector from "./components/LanguageSelector";
 
 function App() {
-  const { t, i18n } = useTranslation();
-
-  const switchLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
-  console.log(localStorage.getItem("i18nextLng"));
-
   return (
     <>
-      <div className="flex w-full justify-center align-center h-screen">
-        <Menu />
-        <h1>{t("welcome")}</h1>
+      <div className="w-full p-8 h-screen">
+        <div className="w-full h-[30px] flex flex-col">
+          <div className="w-full flex flex-row justify-between">
+            <div className="w-fit flex flex-row items-center gap-2">
+              {/* <div className="w-[60px]">
+                <img src="/assets/logos/bestwater.png" alt="Bestwater Logo" />
+              </div> */}
+              <div className="flex flex-col justify-center items-start">
+                <h1 className="text-4xl font-extrabold text-red-700">
+                  BESTWATER
+                </h1>
+                <span className="text-sm italic font-light text-gray-600">
+                  Science for healthy life and beauty.
+                </span>
+              </div>
+            </div>
 
-        <Button onClick={() => switchLanguage("en")}>English</Button>
-        <Button onClick={() => switchLanguage("ge")}>ქართული</Button>
+            <LanguageSelector />
+          </div>
+          <Menu />
+        </div>
       </div>
     </>
   );

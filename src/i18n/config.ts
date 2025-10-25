@@ -4,6 +4,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "./en.json";
 import ge from "./ge.json";
+import ru from "./ru.json";
 
 i18n
   .use(LanguageDetector) // 🧠 add this plugin
@@ -12,6 +13,7 @@ i18n
     resources: {
       en: { translation: en },
       ge: { translation: ge },
+      ru: { translation: ru },
     },
     fallbackLng: "en",
     interpolation: { escapeValue: false },

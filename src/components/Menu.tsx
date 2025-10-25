@@ -50,7 +50,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-export function Menu() {
+function Menu() {
   //   const isMobile = useIsMobile();
 
   return (
@@ -216,3 +216,5 @@ function ListItem({
     </li>
   );
 }
+
+export default Menu;
