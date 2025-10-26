@@ -1,20 +1,83 @@
 {
   "Menu": {
     "home": {
-      "title": "Home"
+      "title": "Home",
+      "url": "/"
     },
     "filters": {
       "title": "Filters",
       "items": {
-        "home_water": "წყლის მემბრანული ფილტრები მთლიანად კერძო სახლისა და აგარაკებისათვის",
-        "home_wine": "საოჯახო მარნებისათვის ღვინის მემბრანული ფილტრები",
-        "industry_water": "სასმელი და მინერალური წყლის საწარმოო, მემბრანული ფილტრები",
-        "industry_wine": "ღვინის საწარმოო, მემბრანული ფილტრები",
-        "industry_vodka": "არყის და კონიაკის საწარმოო მემბრანული ფილტრები"
+        "home_water": {
+          "description": "წყლის მემბრანული ფილტრები მთლიანად კერძო სახლისა და აგარაკებისათვის",
+          "url": "/home-water"
+        },
+        "home_wine": {
+          "description": "საოჯახო მარნებისათვის ღვინის მემბრანული ფილტრები",
+          "url": "/"
+        },
+        "industry_water": {
+          "description": "სასმელი და მინერალური წყლის საწარმოო, მემბრანული ფილტრები",
+          "url": "/"
+        },
+        "industry_wine": {
+          "description": "ღვინის საწარმოო, მემბრანული ფილტრები",
+          "url": "/"
+        },
+        "industry_vodka": {
+          "description": "არყის და კონიაკის საწარმოო მემბრანული ფილტრები",
+          "url": "/"
+        }
       }
     },
-    "science": "Science",
-    "technology": "Technology",
-    "contant": "Contact"
+    "science": {
+      "title": "Science",
+      "items": {
+        "articles": {
+          "description": "ადგილობრივ და უცხოურ სამეცნიერო ჟურნალებში გამოქვეყნებული სტატიები",
+          "url": "/"
+        },
+        "science_projects": {
+          "description": "სამეცნიერო პროექტები და გრანტები",
+          "url": "/"
+        },
+        "textbooks": {
+          "description": "სახელმძღვანელოები",
+          "url": "/"
+        },
+        "patents": {
+          "description": "პატენტები და გამოგონებები",
+          "url": "/"
+        },
+        "conferences": {
+          "description": "კონფერენციებში მონაწილეობა",
+          "url": "/"
+        }
+      }
+    },
+    "technology": {
+      "title": "Technology",
+      "items": {
+        "manufacturing_membranes": {
+          "description": "მანუფაქტურა და მემბრანების წარმოება",
+          "url": "/"
+        },
+        "production": {
+          "description": "წარმოება",
+          "url": "/"
+        },
+        "laboratory": {
+          "description": "ლაბორატორია",
+          "url": "/"
+        }
+      }
+    },
+    "history": {
+      "title": "History",
+      "url": "/history"
+    },
+    "contact": {
+      "title": "Contact",
+      "url": "/contact"
+    }
   }
 }

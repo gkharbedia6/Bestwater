@@ -1,20 +1,83 @@
 {
   "Menu": {
     "home": {
-      "title": "მთავარი"
+      "title": "მთავარი",
+      "url": "/"
     },
     "filters": {
       "title": "ფილტრები",
       "items": {
-        "home_water": "წყლის მემბრანული ფილტრები მთლიანად კერძო სახლისა და აგარაკებისათვის",
-        "home_wine": "საოჯახო მარნებისათვის ღვინის მემბრანული ფილტრები",
-        "industry_water": "სასმელი და მინერალური წყლის საწარმოო, მემბრანული ფილტრები",
-        "industry_wine": "ღვინის საწარმოო, მემბრანული ფილტრები",
-        "industry_vodka": "არყის და კონიაკის საწარმოო მემბრანული ფილტრები"
+        "home_water": {
+          "title": "წყლის მემბრანული ფილტრები მთლიანად კერძო სახლისა და აგარაკებისათვის",
+          "url": "filters/home-water"
+        },
+        "home_wine": {
+          "title": "საოჯახო მარნებისათვის ღვინის მემბრანული ფილტრები",
+          "url": "filters/home-wine"
+        },
+        "industry_water": {
+          "title": "სასმელი და მინერალური წყლის საწარმოო, მემბრანული ფილტრები",
+          "url": "filters/industry-water"
+        },
+        "industry_wine": {
+          "title": "ღვინის საწარმოო, მემბრანული ფილტრები",
+          "url": "filters/industry-wine"
+        },
+        "industry_vodka": {
+          "title": "არყის და კონიაკის საწარმოო მემბრანული ფილტრები",
+          "url": "filters/industry-vodka"
+        }
       }
     },
-    "science": "მეცნიერება",
-    "technology": "ტექნოლოგია",
-    "contact": "კონტაქტი"
+    "science": {
+      "title": "მეცნიერება",
+      "items": {
+        "articles": {
+          "title": "ადგილობრივ და უცხოურ სამეცნიერო ჟურნალებში გამოქვეყნებული სტატიები",
+          "url": "/science/articles"
+        },
+        "science_projects": {
+          "title": "სამეცნიერო პროექტები და გრანტები",
+          "url": "/science/science-projects"
+        },
+        "textbooks": {
+          "title": "სახელმძღვანელოები",
+          "url": "/science/textbooks"
+        },
+        "patents": {
+          "title": "პატენტები და გამოგონებები",
+          "url": "/science/patents"
+        },
+        "conferences": {
+          "title": "კონფერენციებში მონაწილეობა",
+          "url": "/science/conferences"
+        }
+      }
+    },
+    "technology": {
+      "title": "ტექნოლოგია",
+      "items": {
+        "manufacturing_membranes": {
+          "title": "მანუფაქტურა და მემბრანების წარმოება",
+          "url": "/technology/manufacturing-membranes"
+        },
+        "production": {
+          "title": "წარმოება",
+          "url": "/technology/production"
+        },
+        "laboratory": {
+          "title": "ლაბორატორია",
+          "url": "/technology/laboratory"
+        }
+      }
+    },
+    "history": {
+      "title": "ისტორია",
+      "url": "/history"
+    },
+    "contact": {
+      "title": "კონტაქტი",
+      "url": "/contact"
+    }
   }
 }
