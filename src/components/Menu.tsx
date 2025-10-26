@@ -12,8 +12,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { useTranslation } from "react-i18next";
-import MapEmbed from "./MapEmbed";
-import { Mail, Phone } from "lucide-react";
 
 function Menu() {
   const isMobile = useIsMobile();
@@ -26,7 +24,7 @@ function Menu() {
   });
 
   return (
-    <nav className="flex justify-center items-center ">
+    <nav className="flex justify-center items-center py-8 relative z-20">
       <NavigationMenu viewport={isMobile}>
         <NavigationMenuList className="flex-wrap">
           <NavigationMenuItem>

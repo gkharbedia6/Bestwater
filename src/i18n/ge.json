@@ -78,6 +78,10 @@
     "contact": {
       "title": "კონტაქტი",
       "url": "/contact"
+    },
+    "search": {
+      "title": "ძიება...",
+      "description": "რეზულტატი"
     }
   }
 }
