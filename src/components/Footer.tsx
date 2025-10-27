@@ -12,7 +12,7 @@ function Footer() {
         <Tooltip>
           <TooltipTrigger asChild>
             <a
-              href="https://institutes.gtu.ge/Member/211"
+              href="https://github.com/gkharbedia6"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 hover:text-red-700"
