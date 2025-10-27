@@ -11,6 +11,7 @@ import {
   ArrowUpRightIcon,
   FileUser,
   BookText,
+  MoveHorizontalIcon,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
@@ -27,11 +28,34 @@ export default function LandingPage() {
       <h2 className="w-full text-center p-4 text-xl md:text-4xl font-ge">
         {t("Landing.filterComparison")}
       </h2>
-      <ReactBeforeSliderComponent
+      {/* <ReactBeforeSliderComponent
         currentPercentPosition={50}
         firstImage={{ imageUrl: filterTwo }}
         secondImage={{ imageUrl: filterOne }}
-      />
+      /> */}
+      <div className="relative w-full">
+        <ReactBeforeSliderComponent
+          currentPercentPosition={50}
+          firstImage={{ imageUrl: filterTwo }}
+          secondImage={{ imageUrl: filterOne }}
+          delimiterColor="white" // your red-700
+          delimiterIconStyles={{
+            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
+              '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-horizontal-icon lucide-move-horizontal"><path d="m18 8 4 4-4 4"/><path d="M2 12h20"/><path d="m6 8-4 4 4 4"/></svg>'
+            )}")`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "100%",
+            backgroundColor: "white",
+            border: "3px solid white",
+            borderRadius: "50%",
+          }}
+        />
+        {/* <MoveHorizontalIcon
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-red-700 pointer-events-none"
+          size={20}
+        /> */}
+      </div>
       <Separator className="my-8 xl:my-12" />
       <div className="flex flex-col">
         <h3 className="w-full text-center p-4 text-xl md:text-6xl font-ge">
