@@ -83,5 +83,34 @@
       "title": "Search...",
       "description": "Results"
     }
+  },
+  "Landing": {
+    "filterComparison": "მემბრანულ ფილტრში გაფილტრული ქალაქის ონკანის წყალი",
+    "welcome": "კეთილი იყოს თქვენი მობრძანება",
+    "head_of_project": {
+      "title": "პროექტის ხელმძღვანელი",
+      "description": "გიორგი ბიბილეიშვილი",
+      "tooltip": "იხილეთ მეტი",
+      "items": {
+        "CV": {
+          "title": "CV",
+          "url": "/assets/documents/Giorgi_Bibileishvili_CV_En.pdf",
+          "tooltip": "Download"
+        },
+        "works": {
+          "title": "Published Works",
+          "url": "/assets/documents/Giorgi_Bibileishvili_Works_En.pdf",
+          "tooltip": "Download"
+        }
+      }
+    },
+    "finger_image": {
+      "title": "მემბრანული ტექნოლოგიების საინჟინრო ინსტიტუტი",
+      "description": "მეცნიერება ჯანმრთელი ცხოვრების და სილამაზისთვის"
+    },
+    "contact_us": {
+      "title": "დაგვეკონტაქტე",
+      "url": "/contact"
+    }
   }
 }

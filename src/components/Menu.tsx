@@ -24,7 +24,7 @@ function Menu() {
   });
 
   return (
-    <nav className="flex justify-center items-center py-8 relative z-20">
+    <nav className="flex justify-start xl:justify-center items-center py-8 relative z-10">
       <NavigationMenu viewport={isMobile}>
         <NavigationMenuList className="flex-wrap">
           <NavigationMenuItem>
