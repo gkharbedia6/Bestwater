@@ -134,3 +134,9 @@
 @utility font-en-ru {
   font-family: "Lora", sans-serif;
 }
+
+::selection {
+  background-color: oklch(50.5% 0.213 27.518);
+  /* red-700 */
+  color: white;
+}
