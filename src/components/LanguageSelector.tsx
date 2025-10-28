@@ -32,7 +32,7 @@ function LanguageSelector() {
 
   return (
     <Select onValueChange={switchLanguage} value={languagePreference}>
-      <SelectTrigger className="w-fit">
+      <SelectTrigger className="w-[150px]">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
