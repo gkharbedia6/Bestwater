@@ -6,7 +6,7 @@ function Footer() {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-accent h-[300px] w-full p-8 relative">
+    <div className="bg-accent h-[500px] w-full p-8 relative">
       <p className="text-xs font-en-ru absolute bottom-6 left-6">
         © 2017. Bestwater. All rights reserved. Website developed by{" "}
         <Tooltip>
