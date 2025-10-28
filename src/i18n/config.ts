@@ -7,7 +7,7 @@ import ge from "./ge.json";
 import ru from "./ru.json";
 
 i18n
-  .use(LanguageDetector) // 🧠 add this plugin
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
@@ -15,12 +15,11 @@ i18n
       ge: { translation: ge },
       ru: { translation: ru },
     },
-    fallbackLng: "en",
+    lng: localStorage.getItem("i18nextLng") || "ge",
+    fallbackLng: "ge",
     interpolation: { escapeValue: false },
     detection: {
-      // 👇 where to look for the language preference
-      order: ["localStorage", "navigator", "htmlTag"],
-      // 👇 where to store it when user switches language
+      order: ["localStorage", "htmlTag"],
       caches: ["localStorage"],
     },
   });
