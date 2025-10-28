@@ -6,21 +6,32 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 function LanguageSelector() {
   const { i18n } = useTranslation();
+  const [languagePreference, setLanguagePreference] = useState("ge");
 
-  const languagePreference = localStorage.getItem("i18nextLng");
+  useEffect(() => {
+    const storedLang = localStorage.getItem("i18nextLng");
+    console.log(storedLang);
+    if (storedLang) {
+      setLanguagePreference(storedLang);
+      i18n.changeLanguage(storedLang);
+    } else {
+      i18n.changeLanguage("ge");
+      localStorage.setItem("i18nextLng", "ge");
+    }
+  }, [i18n]);
 
   const switchLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
+    localStorage.setItem("i18nextLng", lang);
+    setLanguagePreference(lang);
   };
 
   return (
-    <Select
-      onValueChange={(e: string) => switchLanguage(e)}
-      defaultValue={languagePreference ?? "ge"}
-    >
+    <Select onValueChange={switchLanguage} value={languagePreference}>
       <SelectTrigger className="w-fit">
         <SelectValue />
       </SelectTrigger>
