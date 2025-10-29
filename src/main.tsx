@@ -24,6 +24,7 @@ import Conferences from "./pages/science/Conferences.tsx";
 import ManufacturingMembranes from "./pages/technology/ManufacturingMembranes.tsx";
 import Production from "./pages/technology/Production.tsx";
 import Laboratory from "./pages/technology/Laboratory.tsx";
+import Filters from "./pages/filters/Filters.tsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "filters",
+        element: <Filters />,
         children: [
           {
             index: true,

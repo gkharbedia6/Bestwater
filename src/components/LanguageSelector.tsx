@@ -12,17 +12,6 @@ function LanguageSelector() {
   const { i18n } = useTranslation();
   const [languagePreference, setLanguagePreference] = useState("ge");
 
-  // useEffect(() => {
-  //   const storedLang = localStorage.getItem("i18nextLng");
-  //   if (storedLang) {
-  //     setLanguagePreference(storedLang);
-  //     i18n.changeLanguage(storedLang);
-  //   } else {
-  //     i18n.changeLanguage("ge");
-  //     localStorage.setItem("i18nextLng", "ge");
-  //   }
-  // }, [i18n]);
-
   useEffect(() => {
     const storedLang = localStorage.getItem("i18nextLng");
     const langToSet = storedLang || "ge";
