@@ -42,12 +42,12 @@ function App() {
 
             <div className="flex items-center w-full justify-end xl:w-fit">
               <InputGroup className="w-[300px]">
-                <InputGroupInput placeholder={t("Menu.search.title")} />
+                <InputGroupInput placeholder={t("Search.title")} />
                 <InputGroupAddon>
                   <Search />
                 </InputGroupAddon>
                 <InputGroupAddon align="inline-end">
-                  12 {t("Menu.search.description")}
+                  12 {t("Search.description")}
                 </InputGroupAddon>
               </InputGroup>
             </div>

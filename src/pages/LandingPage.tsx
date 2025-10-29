@@ -67,17 +67,20 @@ export default function LandingPage() {
             </p>
             <Tooltip>
               <TooltipTrigger asChild>
-                <a
-                  href="https://institutes.gtu.ge/Member/211"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-row items-center gap-1 hover:opacity-70"
-                >
-                  <p className="text-lg italic">
-                    {t("Landing.head_of_project.description")}
-                  </p>
-                  <ArrowUpRightIcon size={20} />
-                </a>
+                <Button variant="link" asChild size="sm">
+                  <a
+                    href="https://institutes.gtu.ge/Member/211"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-row items-center gap-1"
+                  >
+                    <p className="text-lg italic">
+                      {t("Landing.head_of_project.description")}
+                    </p>
+
+                    <ArrowUpRightIcon size={20} />
+                  </a>
+                </Button>
               </TooltipTrigger>
               <TooltipContent>
                 <p>{t("Landing.head_of_project.tooltip")}</p>

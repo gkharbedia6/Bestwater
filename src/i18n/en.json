@@ -6,6 +6,7 @@
     },
     "filters": {
       "title": "Filters",
+      "url": "/filters",
       "items": {
         "home_water": {
           "title": "წყლის მემბრანული ფილტრები მთლიანად კერძო სახლისა და აგარაკებისათვის",
@@ -31,6 +32,7 @@
     },
     "science": {
       "title": "Science",
+      "url": "/science",
       "items": {
         "articles": {
           "title": "ადგილობრივ და უცხოურ სამეცნიერო ჟურნალებში გამოქვეყნებული სტატიები",
@@ -56,6 +58,7 @@
     },
     "technology": {
       "title": "Technology",
+      "url": "/technology",
       "items": {
         "manufacturing_membranes": {
           "title": "მანუფაქტურა და მემბრანების წარმოება",
@@ -78,11 +81,11 @@
     "contact": {
       "title": "Contact",
       "url": "/contact"
-    },
-    "search": {
-      "title": "Search...",
-      "description": "Results"
     }
+  },
+  "Search": {
+    "title": "Search...",
+    "description": "Results"
   },
   "Landing": {
     "filterComparison": "მემბრანულ ფილტრში გაფილტრული ქალაქის ონკანის წყალი",
@@ -112,5 +115,19 @@
       "title": "დაგვეკონტაქტე",
       "url": "/contact"
     }
+  },
+  "Footer": {
+    "why_bestwater": {
+      "title": "Why BESTWATER?",
+      "items": {
+        "itemOne": "Science-driven innovation",
+        "itemTwo": "Pure and sterile water",
+        "itemThree": "Laboratory-tested quality",
+        "itemFour": "Energy-efficient filtration technology"
+      }
+    },
+    "quick_links": "Quick Links",
+    "contact": "Contact",
+    "address": "Mukhran Machavariani 63/3, Tbilisi"
   }
 }

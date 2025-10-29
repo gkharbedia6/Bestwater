@@ -14,7 +14,6 @@ function LanguageSelector() {
 
   useEffect(() => {
     const storedLang = localStorage.getItem("i18nextLng");
-    console.log(storedLang);
     if (storedLang) {
       setLanguagePreference(storedLang);
       i18n.changeLanguage(storedLang);
