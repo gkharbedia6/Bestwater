@@ -256,15 +256,21 @@
       "items": {
         "manufacturing_membranes": {
           "title": "მანუფაქტურა და მემბრანების წარმოება",
-          "url": "/technology/manufacturing-membranes"
+          "url": "/technology/manufacturing-membranes",
+          "heading": "მემბრანების სინთეზი, კვლევა, დამზადება",
+          "content": ""
         },
         "production": {
           "title": "წარმოება",
-          "url": "/technology/production"
+          "url": "/technology/production",
+          "heading": "საწარმოო და ექსპერიმენტული ბაზა",
+          "content": ""
         },
         "laboratory": {
           "title": "ლაბორატორია",
-          "url": "/technology/laboratory"
+          "url": "/technology/laboratory",
+          "heading": "მემბრანული, ფიზიკურ-ქიმიური და ბიოლოგიური ლაბორატორიები",
+          "content": ""
         }
       }
     },

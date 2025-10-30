@@ -27,6 +27,7 @@ import Laboratory from "./pages/technology/Laboratory.tsx";
 import Filters from "./pages/filters/Filters.tsx";
 import Science from "./pages/science/Science.tsx";
 import ArticleYear from "./pages/science/ArticleYear.tsx";
+import Technology from "./pages/technology/Technology.tsx";
 
 const router = createBrowserRouter([
   {
@@ -109,6 +110,7 @@ const router = createBrowserRouter([
       },
       {
         path: "technology",
+        element: <Technology />,
         children: [
           {
             index: true,
