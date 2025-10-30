@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 interface iPagesNavigationSidebarProps {
@@ -15,6 +14,8 @@ function PagesNavigationSidebar({ title, urls }: iPagesNavigationSidebarProps) {
   const storedLang = localStorage.getItem("i18nextLng");
   const location = useLocation();
 
+  console.log(location);
+
   return (
     <div className="flex flex-col items-start justify-start w-[20%] gap-4">
       <p
@@ -29,9 +30,10 @@ function PagesNavigationSidebar({ title, urls }: iPagesNavigationSidebarProps) {
         {urls.map((url: any, index: number) => (
           <Link
             className={cn("text-sm ", {
-              "pointer-events-none opacity-30":
-                location.pathname === url[1].url,
-              "hover:underline": location.pathname !== url[1].url,
+              "pointer-events-none opacity-30": location.pathname.startsWith(
+                url[1].url
+              ),
+              "hover:underline": !location.pathname.startsWith(url[1].url),
             })}
             to={url[1].url}
             key={`${url[1].url} + ${index}`}

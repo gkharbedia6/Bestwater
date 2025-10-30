@@ -25,6 +25,8 @@ import ManufacturingMembranes from "./pages/technology/ManufacturingMembranes.ts
 import Production from "./pages/technology/Production.tsx";
 import Laboratory from "./pages/technology/Laboratory.tsx";
 import Filters from "./pages/filters/Filters.tsx";
+import Science from "./pages/science/Science.tsx";
+import ArticleYear from "./pages/science/ArticleYear.tsx";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +69,7 @@ const router = createBrowserRouter([
       },
       {
         path: "science",
+        element: <Science />,
         children: [
           {
             index: true,
@@ -75,6 +78,16 @@ const router = createBrowserRouter([
           {
             path: "articles",
             element: <Articles />,
+            children: [
+              {
+                index: true,
+                element: <Navigate to="2021" replace />,
+              },
+              {
+                path: ":id",
+                element: <ArticleYear />,
+              },
+            ],
           },
           {
             path: "science-projects",
