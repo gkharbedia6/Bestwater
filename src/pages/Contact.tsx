@@ -12,10 +12,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import MapEmbed from "@/components/MapEmbed";
-import { ArrowRightIcon, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 const formSchema = z.object({
   name: z.string(),
