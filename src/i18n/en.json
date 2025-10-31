@@ -278,6 +278,27 @@
       "title": "History",
       "url": "/history"
     },
+    "gallery": {
+      "title": "Gallery",
+      "url": "/gallery",
+      "items": {
+        "videoOne": {
+          "title": "110 cm wide membrane production device.",
+          "video-url": "/assets/videos/110_cm_wide_membrane.mp4",
+          "poster-url": "/assets/videos/110_cm_wide_membrane.jpg"
+        },
+        "videoTwo": {
+          "title": "Manufacturing of plastic components for a membrane filter.",
+          "video-url": "/assets/videos/Manufacturing_of_plastic_components_for_a_membrane_filter.mp4",
+          "poster-url": "/assets/videos/Manufacturing_of_plastic_components_for_a_membrane_filter.jpg"
+        },
+        "videoThree": {
+          "title": " Measurement of the membrane’s topography using a probe microscope and analysis of nanoparticles with a nanosizer.",
+          "video-url": "/assets/videos/Measurement_of_the_membrane.mp4",
+          "poster-url": "/assets/videos/Measurement_of_the_membrane.jpg"
+        }
+      }
+    },
     "contact": {
       "title": "Contact",
       "url": "/contact"

@@ -130,6 +130,14 @@ function Menu() {
               asChild
               className={navigationMenuTriggerStyle()}
             >
+              <Link to={t("Menu.gallery.url")}>{t("Menu.gallery.title")}</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              asChild
+              className={navigationMenuTriggerStyle()}
+            >
               <Link to={t("Menu.contact.url")}>{t("Menu.contact.title")}</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>

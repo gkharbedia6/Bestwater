@@ -29,6 +29,7 @@ import Science from "./pages/science/Science.tsx";
 import ArticleYear from "./pages/science/ArticleYear.tsx";
 import Technology from "./pages/technology/Technology.tsx";
 import { Toaster } from "./components/ui/sonner.tsx";
+import Gallery from "./pages/Gallery.tsx";
 
 const router = createBrowserRouter([
   {
@@ -130,6 +131,10 @@ const router = createBrowserRouter([
             element: <Laboratory />,
           },
         ],
+      },
+      {
+        path: "gallery",
+        element: <Gallery />,
       },
       {
         path: "history",

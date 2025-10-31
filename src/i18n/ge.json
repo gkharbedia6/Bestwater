@@ -278,6 +278,27 @@
       "title": "ისტორია",
       "url": "/history"
     },
+    "gallery": {
+      "title": "გალერეა",
+      "url": "/gallery",
+      "items": {
+        "videoOne": {
+          "title": "110 სმ სიგანის მემბრანის წარმოების მოწყობილობა.",
+          "video-url": "/assets/videos/110_cm_wide_membrane.mp4",
+          "poster-url": "/assets/videos/110_cm_wide_membrane.jpg"
+        },
+        "videoTwo": {
+          "title": "მემბრანული ფილტრის პლასტიკური დეტალების დამზადება.",
+          "video-url": "/assets/videos/Manufacturing_of_plastic_components_for_a_membrane_filter.mp4",
+          "poster-url": "/assets/videos/Manufacturing_of_plastic_components_for_a_membrane_filter.jpg"
+        },
+        "videoThree": {
+          "title": "მემბრანის ტოპოგრაფია ზონდურ მიკროსკოპზე, ნანონაწილაკების ნანოსაიზერზე აზომვა.",
+          "video-url": "/assets/videos/Measurement_of_the_membrane.mp4",
+          "poster-url": "/assets/videos/Measurement_of_the_membrane.jpg"
+        }
+      }
+    },
     "contact": {
       "title": "კონტაქტი",
       "url": "/contact"
