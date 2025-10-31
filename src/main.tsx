@@ -28,6 +28,7 @@ import Filters from "./pages/filters/Filters.tsx";
 import Science from "./pages/science/Science.tsx";
 import ArticleYear from "./pages/science/ArticleYear.tsx";
 import Technology from "./pages/technology/Technology.tsx";
+import { Toaster } from "./components/ui/sonner.tsx";
 
 const router = createBrowserRouter([
   {
@@ -144,6 +145,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <Toaster position="top-center" />
     <RouterProvider router={router} />
   </StrictMode>
 );

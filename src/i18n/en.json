@@ -329,5 +329,42 @@
     "quick_links": "Quick Links",
     "contact": "Contact",
     "address": "Mukhran Machavariani 63/3, Tbilisi"
+  },
+  "Contact": {
+    "info": {
+      "title": "Information",
+      "content": "რამე ინფორმაცია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია."
+    },
+    "address": "Mukhran Machavariani 63/3, Tbilisi",
+    "form": {
+      "title": "Contact Form",
+      "items": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Name",
+          "error-msg": "Name is required"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Email",
+          "error-msg": "Email is required",
+          "error-msg-email": "Please enter email format"
+        },
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Write here",
+          "error-msg": "Comment is required",
+          "description": "Please enter your request/interest"
+        }
+      },
+      "sending": {
+        "send_button": "Send",
+        "reset_button": "Reset"
+      },
+      "alert": {
+        "success": "Application was sent",
+        "error": "Error occurred, please try later"
+      }
+    }
   }
 }

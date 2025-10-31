@@ -12,19 +12,25 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import MapEmbed from "@/components/MapEmbed";
-import { Mail, Phone } from "lucide-react";
+import { LoaderCircle, Mail, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
-
-const formSchema = z.object({
-  name: z.string(),
-  email: z.string(),
-  comment: z.string(),
-});
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import { toast } from "sonner";
 
 function Contact() {
   const { t } = useTranslation();
   const storedLang = localStorage.getItem("i18nextLng");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const formSchema = z.object({
+    name: z.string().min(1, t("Contact.form.items.name.error-msg")),
+    email: z
+      .email(t("Contact.form.items.email.error-msg-email"))
+      .min(1, t("Contact.form.items.email.error-msg")),
+    comment: z.string().min(1, t("Contact.form.items.comment.error-msg")),
+  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -35,8 +41,23 @@ function Contact() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    console.log(data);
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        data,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      // console.log(res.text);
+    } catch (error) {
+      setIsLoading(false);
+      toast.error(t("Contact.form.alert.error"));
+    } finally {
+      toast.success(t("Contact.form.alert.success"));
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -49,13 +70,10 @@ function Contact() {
               "font-en-ru": storedLang !== "ge",
             })}
           >
-            ინფორმაცია
+            {t("Contact.info.title")}
           </h3>
           <ul className="flex flex-col gap-2 py-4">
-            <p className="text-sm pb-4 ">
-              რამე ინფორმაცია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია
-              რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია
-            </p>
+            <p className="text-sm pb-4 ">{t("Contact.info.content")}</p>
             <a
               href="tel:+995599077575"
               className="flex flex-row items-center gap-3 cursor-pointer text-xs group"
@@ -80,7 +98,7 @@ function Contact() {
                 75bibileishvili@gmail.com
               </span>
             </a>
-            <p className="text-sm">{t("Footer.address")}</p>
+            <p className="text-sm">{t("Contact.address")}</p>
           </ul>
         </div>
         <MapEmbed />
@@ -92,7 +110,7 @@ function Contact() {
             "font-en-ru": storedLang !== "ge",
           })}
         >
-          საკონტაქტო ფორმა
+          {t("Contact.form.title")}
         </h3>
         <form id="form-rhf-input" onSubmit={form.handleSubmit(onSubmit)}>
           <FieldGroup>
@@ -103,13 +121,13 @@ function Contact() {
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel htmlFor="form-rhf-input-name">
-                      სახელი
+                      {t("Contact.form.items.name.label")}
                     </FieldLabel>
                     <Input
                       {...field}
                       id="form-rhf-input-name"
                       aria-invalid={fieldState.invalid}
-                      placeholder="სახელი"
+                      placeholder={t("Contact.form.items.name.placeholder")}
                       autoComplete="name"
                     />
 
@@ -125,20 +143,16 @@ function Contact() {
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel htmlFor="form-rhf-input-email">
-                      მეილი
+                      {t("Contact.form.items.email.label")}
                     </FieldLabel>
                     <Input
                       {...field}
                       id="form-rhf-input-email"
                       aria-invalid={fieldState.invalid}
-                      placeholder="მეილი"
+                      placeholder={t("Contact.form.items.email.placeholder")}
                       autoComplete="email"
                     />
-                    {/* <FieldDescription>
-                    This is your public display name. Must be between 3 and 10
-                    characters. Must only contain letters, numbers, and
-                    underscores.
-                  </FieldDescription> */}
+
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
                     )}
@@ -153,18 +167,18 @@ function Contact() {
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
                   <FieldLabel htmlFor="form-rhf-input-comment">
-                    კომენტარი
+                    {t("Contact.form.items.comment.label")}
                   </FieldLabel>
                   <Textarea
                     {...field}
                     id="form-rhf-input-comment"
                     aria-invalid={fieldState.invalid}
                     autoComplete="comment"
-                    placeholder="ჩაწერეთ აქ."
+                    placeholder={t("Contact.form.items.comment.placeholder")}
                     className="min-h-[150px]"
                   />
                   <FieldDescription>
-                    გთხოვთ ჩაჭეროთ თქვენი ინტერესი/მოთხოვნა.
+                    {t("Contact.form.items.comment.description")}
                   </FieldDescription>
                   {fieldState.invalid && (
                     <FieldError errors={[fieldState.error]} />
@@ -176,19 +190,25 @@ function Contact() {
         </form>
         <Field orientation="horizontal" className="pt-4">
           <Button
-            className="cursor-pointer"
+            disabled={isLoading}
+            className="cursor-pointer min-w-[75px]"
             type="button"
             variant="outline"
             onClick={() => form.reset()}
           >
-            Reset
+            {t("Contact.form.sending.reset_button")}
           </Button>
           <Button
-            className="cursor-pointer"
+            disabled={isLoading}
+            className="cursor-pointer min-w-[75px]"
             type="submit"
             form="form-rhf-input"
           >
-            Save
+            {isLoading ? (
+              <LoaderCircle className="animate-spin" />
+            ) : (
+              <span>{t("Contact.form.sending.send_button")}</span>
+            )}
           </Button>
         </Field>
       </div>

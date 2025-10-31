@@ -14,7 +14,7 @@ function PagesNavigationSidebar({ title, urls }: iPagesNavigationSidebarProps) {
   const storedLang = localStorage.getItem("i18nextLng");
   const location = useLocation();
 
-  console.log(location);
+  // console.log(location);
 
   return (
     <div className="flex flex-col items-start justify-start w-[20%] gap-4">
