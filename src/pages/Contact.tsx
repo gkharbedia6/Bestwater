@@ -51,11 +51,12 @@ function Contact() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       // console.log(res.text);
+      toast.success(t("Contact.form.alert.success"));
+      form.reset();
     } catch (error) {
       setIsLoading(false);
       toast.error(t("Contact.form.alert.error"));
     } finally {
-      toast.success(t("Contact.form.alert.success"));
       setIsLoading(false);
     }
   }
