@@ -38,19 +38,24 @@ export function flattenLocaleBundle(bundle: any): SearchItem[] {
   });
 
   // ----- Science > Articles (optional – extend as needed) -----
-  const sciArticles = bundle?.Menu?.science?.items?.articles;
-  if (sciArticles?.title) {
-    items.push({
-      id: `science:articles`,
-      url: sciArticles?.url ?? "/",
-      title: sciArticles?.title,
-      heading: sciArticles?.heading,
-      content: "", // you can concatenate year contents if you want deep search
-      section: "science",
-    });
-  }
+  const scienceArticlesBaseUrl = bundle?.Menu?.science?.items.articles.url;
+  const scienceArticles = bundle?.Menu?.science?.items.articles.items;
 
-  // Add more sections the same way as needed…
+  Object.entries<any>(scienceArticles).forEach(([key, value]) => {
+    const articleUrl = `${scienceArticlesBaseUrl}/${key}`;
+    Object.entries<any>(value.items).forEach(([, value]) => {
+      items.push({
+        id: `science:articles:${key}`,
+        url: articleUrl ?? "/",
+        title: value?.title,
+        // heading: value.content.lineOne,
+        content: value.content.lineOne + value.content.lineTwo,
+        section: "science",
+      });
+    });
+  });
+
+  console.log(items);
 
   // De-duplicate by id (defensive)
   const seen = new Set<string>();

@@ -1,5 +1,5 @@
 // src/components/SearchBar.tsx
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import {
@@ -52,7 +52,6 @@ export default function SearchBar() {
         </InputGroup>
       </div>
 
-      {/* Results popover */}
       {open && results.length > 0 && (
         <div
           className="absolute right-0 mt-2 w-[500px] max-h-[60vh] overflow-auto rounded-xl border bg-background shadow-lg z-50"
@@ -60,7 +59,6 @@ export default function SearchBar() {
         >
           <ul className="divide-y">
             {results.map(({ item }, idx) => {
-              //   console.log(item.url);
               return (
                 <li key={item.id + idx} className="p-3 hover:bg-accent/40">
                   <Link
