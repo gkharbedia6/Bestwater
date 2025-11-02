@@ -9,6 +9,7 @@ import {
 } from "./components/ui/input-group";
 import { Search } from "lucide-react";
 import Footer from "./components/Footer";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const { t } = useTranslation();
@@ -44,15 +45,7 @@ function App() {
             <Menu />
 
             <div className="flex items-center w-full justify-end xl:w-fit">
-              <InputGroup className="w-[300px]">
-                <InputGroupInput placeholder={t("Search.title")} />
-                <InputGroupAddon>
-                  <Search />
-                </InputGroupAddon>
-                <InputGroupAddon align="inline-end">
-                  12 {t("Search.description")}
-                </InputGroupAddon>
-              </InputGroup>
+              <SearchBar />
             </div>
           </div>
         </div>

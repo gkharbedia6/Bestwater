@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { useIsMobile } from "../hooks/use-mobile";
+import { useIsMobile } from "../lib/hooks/useMobile";
 import {
   NavigationMenu,
   NavigationMenuContent,
