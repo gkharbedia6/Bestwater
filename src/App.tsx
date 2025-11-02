@@ -17,11 +17,14 @@ function App() {
       <div className="w-full py-12 px-12 xl:px-36 2xl:px-64 h-full flex flex-col">
         <div className="w-full h-fit flex flex-col">
           <div className="w-full flex flex-col-reverse xl:flex-row justify-between items-start xl:items-center gap-4">
-            {/* Left side — Logo */}
             <Link
               to={"/"}
               className="w-fit flex flex-row items-center gap-2 cursor-pointer"
             >
+              <img
+                className="w-[90px]"
+                src="/assets/logos/bestwater-main.png"
+              />
               <div className="flex flex-col justify-center items-start">
                 <h1 className="text-5xl lg:text-7xl font-en-ru font-extrabold text-red-700">
                   BESTWATER

@@ -15,7 +15,7 @@ import HomeWine from "./pages/filters/HomeWine.tsx";
 import IndustryWater from "./pages/filters/IndustryWater.tsx";
 import IndustryWine from "./pages/filters/IndustryWine.tsx";
 import IndustryVodka from "./pages/filters/IndustryVodka.tsx";
-import History from "./pages/History.tsx";
+import History from "./pages/history/History.tsx";
 import Articles from "./pages/science/Articles.tsx";
 import ScienceProjects from "./pages/science/ScienceProjects.tsx";
 import Textbooks from "./pages/science/Textbooks.tsx";
