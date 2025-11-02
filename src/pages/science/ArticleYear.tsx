@@ -12,6 +12,9 @@ function ArticleYear() {
     returnObjects: true,
   });
   const [article, setArticle] = useState<iArticleItem | null>(null);
+  const articleItems = t(`Menu.science.items.articles.items.${id}.items`, {
+    returnObjects: true,
+  });
 
   useEffect(() => {
     const found = Object.entries(articlesByYears).find(
@@ -23,7 +26,7 @@ function ArticleYear() {
   }, [id]);
 
   return (
-    <div className="py-4 max-w-[70%] flex flex-col items-start justify-start gap-4">
+    <div className="py-4 flex flex-col items-start justify-start gap-4">
       <h3
         className={cn("text-2xl font-bold", {
           "font-ge": storedLang === "ge",
@@ -32,7 +35,55 @@ function ArticleYear() {
       >
         {article?.title}
       </h3>
-      <p>{article?.content}</p>
+      <ul className="flex flex-col gap-6 justify-start items-start w-full">
+        {Object.entries(articleItems).map(
+          ([num, item]: [num: string, item: iArticleItem]) => {
+            // console.log(item);
+            return (
+              <div
+                className="flex flex-col items-start justify-start gap-4 w-full"
+                key={num}
+              >
+                <p className="font-bold">
+                  {num}. {item.title}
+                </p>
+                <p>
+                  {item.content.lineOneBold ? (
+                    <span className="font-bold">
+                      {item.content.lineOneBold}
+                    </span>
+                  ) : null}{" "}
+                  {item.content.lineOne}
+                </p>
+                <p>
+                  {item.content.lineTwoBold ? (
+                    <span className="font-bold">
+                      {item.content.lineTwoBold}
+                    </span>
+                  ) : null}{" "}
+                  {item.content.lineTwo}
+                </p>
+                <p>
+                  {item.content.lineThreeBold ? (
+                    <span className="font-bold">
+                      {item.content.lineThreeBold}
+                    </span>
+                  ) : null}{" "}
+                  {item.content.lineThree}
+                </p>
+                <p>
+                  {item.content.lineFourBold ? (
+                    <span className="font-bold">
+                      {item.content.lineFourBold}
+                    </span>
+                  ) : null}{" "}
+                  {item.content.lineFour}
+                </p>
+              </div>
+            );
+          }
+        )}
+      </ul>
     </div>
   );
 }

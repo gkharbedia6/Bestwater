@@ -4,7 +4,16 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 
 export interface iArticleItem {
   title: string;
-  content: string;
+  content: {
+    lineOneBold?: string;
+    lineOne?: string;
+    lineTwoBold?: string;
+    lineTwo?: string;
+    lineThreeBold?: string;
+    lineThree?: string;
+    lineFourBold?: string;
+    lineFour?: string;
+  };
 }
 
 function Articles() {
