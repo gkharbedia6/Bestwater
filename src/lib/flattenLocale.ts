@@ -55,7 +55,7 @@ export function flattenLocaleBundle(bundle: any): SearchItem[] {
     });
   });
 
-  console.log(items);
+  // console.log(items);
 
   // De-duplicate by id (defensive)
   const seen = new Set<string>();
