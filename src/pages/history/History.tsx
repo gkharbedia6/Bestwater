@@ -89,7 +89,7 @@ function History() {
           }}
         >
           <MoveUp />
-          ზემოთ დაბრუნება
+          {t("Menu.history.back_button")}
           <MoveUp />
         </Button>
       </div>
