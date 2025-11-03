@@ -46,9 +46,11 @@ export default function SearchBar() {
           <InputGroupAddon>
             <Search />
           </InputGroupAddon>
-          <InputGroupAddon align="inline-end">
-            {results.length} {t("Search.description")}
-          </InputGroupAddon>
+          {results.length !== 0 && (
+            <InputGroupAddon align="inline-end">
+              {results.length} {t("Search.description")}
+            </InputGroupAddon>
+          )}
         </InputGroup>
       </div>
 
