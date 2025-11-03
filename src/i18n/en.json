@@ -51,6 +51,7 @@
         "articles": {
           "title": "ადგილობრივ და უცხოურ სამეცნიერო ჟურნალებში გამოქვეყნებული სტატიები",
           "url": "/science/articles",
+          "click_year": "Click the year:",
           "heading": "სტატიები წლების მიხედვით",
           "items": {
             "2021": {
@@ -1193,7 +1194,648 @@
     },
     "history": {
       "title": "History",
-      "url": "/history"
+      "url": "/history",
+      "heading": "The history of creation and development of the Engineering Institute of Membrane Technologies at GTU, as well as the history and development of the Ltd.“Membrane – 75” and Ltd. “Bestwater” since 1971.",
+      "click_year": "Click the year:",
+      "items": {
+        "1971": [
+          {
+            "type": "content",
+            "content": [
+              "In 1971 – 1974 years, in Italy, in the Research Institute of Food Products at the University of Milan has carried out practical scientific researches in the field of baromembrane processes of separation."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1971/itemOne.jpg"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1971/itemTwo.jpg"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1971/itemThree.jpg"
+          }
+        ],
+        "1975": [
+          {
+            "type": "content",
+            "content": [
+              "In Georgia, for the first time were heard the words Membrane and Membrane Technologies. In 1975 in the Georgian Polytechnic Institute, in problematic laboratory of tea industry was made the first steps in the creation and implementation of membrane technology. The author and leader of this idea and works was the head of the laboratory Vasili Bibileishvili."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1975/itemOne.jpg"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1975/itemTwo.jpg"
+          }
+        ],
+        "1977": [
+          {
+            "type": "content",
+            "content": [
+              "In 1977, was founded scientific - research center of membrane engineering and technology on the basis of the mentioned laboratory."
+            ]
+          }
+        ],
+        "1981": [
+          {
+            "type": "content",
+            "content": [
+              "In 1981, V. Bibileishvili gets the title of senior researcher from Supreme Certification Commission."
+            ]
+          }
+        ],
+        "1987": [
+          {
+            "type": "content",
+            "content": [
+              "In 1987, was established the center of Membrane Technology and Techniques Development and Implementation."
+            ]
+          }
+        ],
+        "1992": [
+          {
+            "type": "content",
+            "content": [
+              "In 1992 Vasili Bibileishvili, have founded the Institute of the Membrane Technology and Techniques Development and Implementation, and ltd. “Membrane - 75”.",
+              "This institution was reorganized as a Legal entity of public right, as an Independent Research Institute at Georgian Technical University and was named the Engineering Institute of Membrane Technologies by the name of V. Bibileishvili."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1992/itemOne.jpg"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1992/itemTwo.jpg"
+          },
+          {
+            "type": "heading",
+            "content": "Patent/License"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1992/itemThree.jpg"
+          }
+        ],
+        "1993": [
+          {
+            "type": "content",
+            "content": ["Horizontal type industrial membrane unit."]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1993/itemOne.jpg"
+          }
+        ],
+        "1994": [
+          {
+            "type": "content",
+            "content": ["Vertical type industrial membrane unit."]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1994/itemOne.jpg"
+          }
+        ],
+        "1995": [
+          {
+            "type": "heading",
+            "content": "Patent/License"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1995/itemOne.jpg"
+          }
+        ],
+        "1996": [
+          {
+            "type": "content",
+            "content": [
+              "In 1996, Director of the Engineering Institute of Membrane Technologies, Vasili Bibileishvili elected as a member International Academy of Sciences, Industry, Education & Arts (California, UNESCO)."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1996/itemOne.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "In 1996, in Budapest, at the exhibition “GENIUS-96” the three membrane nanosystems which were developed in the Institute were awarded with diplomas of the first degree and submitted to the international catalogue “GENIUS 96”."
+            ]
+          },
+          {
+            "type": "heading",
+            "content": "“M10-LMA”"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1996/itemTwo.jpg"
+          },
+          {
+            "type": "heading",
+            "content": "“M10-AND”"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1996/itemThree.jpg"
+          },
+          {
+            "type": "heading",
+            "content": "“M10-URD”"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1996/itemFour.jpg"
+          },
+          {
+            "type": "heading",
+            "content": "Patent/License"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1996/itemFive.jpg"
+          }
+        ],
+        "1997": [
+          {
+            "type": "image",
+            "content": "/assets/images/history/1997/itemOne.jpg"
+          },
+          {
+            "type": "heading",
+            "content": "Multi drainage membrane apparatus."
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1997/itemOne.jpg"
+          }
+        ],
+        "1998": [
+          {
+            "type": "heading",
+            "content": "Patent/License"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1998/itemOne.jpg"
+          }
+        ],
+        "1999": [
+          {
+            "type": "content",
+            "content": [
+              "Serial models of Square and Round types of vertical membrane units."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/1999/itemOne.jpg"
+          }
+        ],
+        "2000": [
+          {
+            "type": "content",
+            "content": [
+              "Ultra filtration Membrane Unit put into exploitation in Kutaisi Central Hospital."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2000/itemOne.jpg"
+          }
+        ],
+        "2001": [
+          {
+            "type": "content",
+            "content": [
+              "Developed membrane filtration apparatus of house (household) type."
+            ]
+          },
+          {
+            "type": "heading",
+            "content": "Patent/License"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2001/itemOne.jpg"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2001/itemTwo.jpg"
+          }
+        ],
+        "2002": [
+          {
+            "type": "content",
+            "content": [
+              "The device of water sterile filtration for swimming pool created and installed."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2002/itemOne.jpg"
+          }
+        ],
+        "2003": [
+          {
+            "type": "content",
+            "content": [
+              "In 2003, membrane products of the Institute receive prize “Era of quality” in gold category  from the organization BID (Business Initiative Directions, General, Yague, 11-28020, Madrid, Spain)."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2003/itemOne.jpg"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2003/itemTwo.jpg"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2003/itemThree.jpg"
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2003/itemFour.jpg"
+          }
+        ],
+        "2004": [
+          {
+            "type": "content",
+            "content": [
+              "Two – step unit for mineral water “Uraveli” sterile filtration is created."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2004/itemOne.jpg"
+          }
+        ],
+        "2005": [
+          {
+            "type": "content",
+            "content": ["Pilot unit for wine filtration is created."]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2005/itemOne.jpg"
+          }
+        ],
+        "2006": [
+          {
+            "type": "content",
+            "content": [
+              "Vertical type membrane unit for wine filtration is created."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2006/itemOne.jpg"
+          }
+        ],
+        "2007": [
+          {
+            "type": "content",
+            "content": [
+              "Membrane units created in the Institute receive a patent in the Czech Republic."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2007/itemOne.jpg"
+          }
+        ],
+        "2008": [
+          {
+            "type": "content",
+            "content": [
+              "Fourth generation serial type Membrane unit is created."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2008/itemOne.jpg"
+          }
+        ],
+        "2009": [
+          {
+            "type": "content",
+            "content": [
+              "4 – 9 June the Institute participates in the 3rd international wine exhibition (3rd International Wine and Spirits Fair, WinExpo Georgia 2009 which was organizes by  “Expo-Georgia” in the capital of Georgia, Tbilisi.  "
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2009/itemOne.jpg"
+          }
+        ],
+        "2010": [
+          {
+            "type": "content",
+            "content": [
+              "In 2010 fundamentally new nanotechnological unit for plant water flow treatment in milk production (whey) is developed. The unit gives possibilities of costly waste disposal and has a closed cycle of water supply."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2010/itemOne.jpg"
+          }
+        ],
+        "2011": [
+          {
+            "type": "content",
+            "content": [
+              "Conclusion of the research laboratory of the Institute of Sanitation and Hygiene, jsc. By the Name of G. Natadze. Analysis of the water of the river Mtkvari after passing through the membrane filter produced by the Institute of Membrane Technology.",
+              "The result of the analysis corresponds to micro biological and chemical component values of bottled water."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2011/itemOne.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "In 2011 year, membrane unit created by the Institute was installed in ltd. “Aversi Clinic”. This unit still works successfully."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2011/itemTwo.jpg"
+          }
+        ],
+        "2012": [
+          {
+            "type": "content",
+            "content": [
+              "For the ensuring of safe environment for human health in 2012, based on nanotechnology, was designed and created fully automated unit for hot and cold sterile water production, with a productivity of 200 – 250 l/h. The unit was installed in the administrative building of the Georgian Technical University (STU). This unit still works without any kind of problem."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2012/itemOne.jpg"
+          }
+        ],
+        "2013": [
+          {
+            "type": "image",
+            "content": "/assets/images/history/2013/itemOne.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "The figure shows the Ultra filtration membrane unit installed in the Engineering Physics building, Georgian Technical University.",
+              "International exhibition of wine “ExpoGeorgia”."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2013/itemOne.jpg"
+          }
+        ],
+        "2014": [
+          {
+            "type": "content",
+            "content": [
+              "In 2014, 26 May, the Institute participated in the exhibition of technical achievements organized by the Ministry of education on the Shota Rustaveli Avenue.",
+              "10 – 12 July 2014, at the exhibition hall of “ExpoGeorgia” industrial Nano filtration membrane apparatus for water treatment was presented.",
+              "September 4, 2014, industrial unit for partial demineralization of water was presented to the state delegation in the administrative building of Georgian Technical University.",
+              "24 – 27 September 2014 at the exhibition hall №11 “ExpoGeorgia” was conducted international exhibition. On the exhibition was presented the equipment for heating, water supply, sanitation, ventilation and equipment for swimming pools. The Institute was represented by the membrane unit for sterile water filtration and partial demineralization, industrial and domestic membrane devices for sterile filtration of wine, as well as, fully automated membrane unit for producing sterile hot and cold water."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2014/itemOne.jpg"
+          }
+        ],
+        "2015": [
+          {
+            "type": "content",
+            "content": [
+              "In September 2015, in the exhibition hall №6 “ExpoGeorgia” the Institute was represented by the membrane unit for sterile filtration of wine."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2015/itemOne.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "On the basis of the performed by the Institute works was created and installed membrane Nano filtration unit at a beer company. “Golden Mug”, which still works."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2015/itemTwo.jpg"
+          }
+        ],
+        "2016": [
+          {
+            "type": "content",
+            "content": [
+              "In September 2016, in the exhibition hall №6 “ExpoGeorgia” the Institute was represented by the laboratory membrane Ultra - and Nano filtration units."
+            ]
+          },
+          {
+            "type": "content",
+            "content": ["Laboratory Ultra filtration membrane unit."]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2016/itemOne.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "Pilot (semi-industrial) Nano filtration membrane unit."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2016/itemTwo.jpg"
+          }
+        ],
+        "2017": [
+          {
+            "type": "content",
+            "content": [
+              "On the drawings are shown composite materials – membranes created by the Engineering Institute of Membrane Technologies. Pictures are obtained with the help of scanning probe, tunneling microscope."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2017/itemOne.jpg"
+          },
+          {
+            "type": "content",
+            "content": ["Scanning probe, tunneling microscope."]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2017/itemTwo.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "Based on the results of research carried out at the Institute, an industrial unit for the production of nanofiltration membranes with a capacity of 250 l / h was manufactured and put into operation. LLC \"Aragvi HPP\" enterprise in September 2017 and is still successfully operating.",
+              "Unit for the production of industrial nanofiltration membranes with a capacity of 250 l/h."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2017/itemThree.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "The Institute has developed a fundamentally new membrane technology and a multistage fully automated membrane line (corresponding patent) ensuring the production of sterile, high quality injection and apirogenic water according to world standards, whose physico-chemical and bacteriological characteristics correspond to the standard data of the French laboratory of Nice for these waters.",
+              "Schematic diagram of the combined membrane device, where 3, 5 and 9 indicate ultra-nanofiltration and reverse osmotic membrane devices, respectively."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2017/itemFour.png"
+          },
+          {
+            "type": "content",
+            "content": [
+              "The nanofiltration and reverse osmotic units produced by the institute are installed in the laboratories of the institute and fully provide them with partial and fully demineralized water."
+            ]
+          },
+          {
+            "type": "content",
+            "content": ["The nanofiltration unit."]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2017/itemFive.jpg"
+          },
+          {
+            "type": "content",
+            "content": ["The reverse osmotic unit."]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2017/itemSix.jpg"
+          }
+        ],
+        "2018": [
+          {
+            "type": "content",
+            "content": [
+              "Seawater desalination provides coastal areas, waterways, military units in the field, seaside settlements and tourist infrastructure with cheap, ecologically clean high-quality drinking water. Based on the results of the research work carried out at the Institute, schematic diagrams of the seawater membrane filtration system have been created:"
+            ]
+          },
+          {
+            "type": "content",
+            "content": [
+              "Up to 20 g/l concentrations of salinity, a schematic diagram of a membrane filtration system for seawater desalination."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2018/itemOne.png"
+          },
+          {
+            "type": "content",
+            "content": [
+              "Up to 12 g/l concentrations of salinity, a schematic diagram of a membrane filtration system for seawater desalination."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2018/itemTwo.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "One of the main directions of Engineering Institute of Membrane Technologies of Georgian Technical University is the processing of composite membranes. Molecular weight, particle size and zeta potential of the substance to form polymer compositions are determined on a nanoparticle measuring instrument (from 0.3 nm) on Zetasaizer Nano ZS90.",
+              "Molecular weight measurement result on the Zetasaizet Nano ZS90."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2018/itemThree.png"
+          }
+        ],
+        "2019": [
+          {
+            "type": "content",
+            "content": [
+              "1. Based on the experiments carried out at the institute, an experimental laboratory unit was created to record the membrane performance values when the height of the pressure chamber is changed.",
+              "Experimental laboratory unit."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2019/itemOne.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "2. The removal of lead and chromium from wastewater is provided by a laboratory tangential nanofiltration membrane unit developed at the Engineering Institute of Membrane Technologies.",
+              "Laboratory tangential nanofiltration membrane unit."
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2019/itemTwo.jpg"
+          },
+          {
+            "type": "content",
+            "content": [
+              "3. It was found that as a result of nanofiltration water is purified from both chemical components and particles of different sizes, which provides a proper level of demineralized and sterile drinking water. Based on the results of these studies, a membrane nanofiltration unit for receiving drinking water from the production mountain with a capacity of 250 l / hour was manufactured, which was assembled, put into operation and is still in operation at \"Lakhami-1 HPP\".",
+              "Membrane nanofiltration unit for receiving drinking water from mountain water, installed at \"Lakhami-1 HPP.\""
+            ]
+          },
+          {
+            "type": "image",
+            "content": "/assets/images/history/2019/itemThree.jpg"
+          }
+        ],
+        "2020": [
+          {
+            "type": "content",
+            "content": [
+              "The scientists of the Engineering Institute of Membrane Technology and foreign specialists are working together at the institute to install a 1-meter wide membrane tape (according to the AISO standard)."
+            ]
+          },
+          {
+            "type": "content",
+            "content": [
+              "• Scientific-research projects - 10;",
+              "• Publication of printed products in Georgia: textbooks - 1; Articles - 10;",
+              "• Publication of printed products abroad: Articles - 3;",
+              "• Participation in the work of scientific forums: in Georgia - 1;",
+              "• The Institute participated in the project of the Ministry of Education, Science, Culture and Sports of Georgia \"CAPTAIN: Science is the Captain\", which was held within the program \"Horizon 2020\";",
+              "• 8 seminars, 2 workshops were held."
+            ]
+          }
+        ],
+        "2021": [
+          {
+            "type": "content",
+            "content": [
+              "• პროგრამული დაფინანსებით გათვალისწინებული სამეცნიერო-კვლევითი პროექ­ტები- 5(13 მიმართულებით);",
+              "• სამეცნიერო კვლევების საფუძველზე  შეიქმნა:    ლაბორატორიული ტიპის ექსპერიმენტალური მემბრანული ხელსაწყოს პრინციპული სქემა; მიკროფილტრაციული მემბრანები;",
+              "• საქართველოში გამოიცა 11 სტატია; უცხოეთში - 1 სტატია(იმპაქტ ფაქტორი);",
+              "• სამეცნიერო ფორუმების მუშაობაში მონაწილეობა: საქართველოში - 1;",
+              "• 2021 წლის-უმაღლესი საგანმანათლებლო დაწესებულებების დამოუკიდებელი სამეცნიერო-კვლევითი ერთეულების მატერიალურ ტექნიკური ბაზის განახლების ხელშეწყობის კონკურსში გამარჯვებული, შოთა რუსთაველის ეროვნული სამეცნიერო ფონდის გრანტით დაფინანსებული პროექტი RIM - 2 -21-123 - “ ძვირადღირებული სამეცნიერო დანადგარები და აღჭურვილობა“-ანალიზური ხელსაწყო-ინფრაწითელი ფურიე სპექტრომეტრი;",
+              "• მემბრანული ტექნოლოგიების საინჟინრო ინსტიტუტში საქართველოს ტექნიკური უნივერსიტეტის ქიმიური ტექნოლოგიისა და მეტალურგიის ფაკულტეტის 16 სტუდენტისათვის ჩატარდა სასწავლო - საწარმოო - პრაქტიკული სამუშაოები  ხელშეკრულების საფუძველზე (ბრძანება №01-08-15/545- 2021-2  28.06.2021), ფაზური ინვერსიული პროცესით მემბრანების შექმნისა და ბარომემბრანული პროცესების კვლევის სამუშაოებთან დაკავშირებით;",
+              "• ჩატარდა: 3 სემინარი, 2 ვორკშოპი."
+            ]
+          }
+        ]
+      }
     },
     "gallery": {
       "title": "Gallery",

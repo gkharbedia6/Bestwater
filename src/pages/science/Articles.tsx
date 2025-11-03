@@ -35,6 +35,9 @@ function Articles() {
       >
         {t("Menu.science.items.articles.heading")}
       </h3>
+      <h4 className="text-xs font-bold">
+        {t("Menu.science.items.articles.click_year")}
+      </h4>
       <ul className="flex flex-row items-start justify-center gap-2">
         {Object.entries(articlesByYears).map(
           ([key, item]: [key: string, item: iArticleItem]) => (
