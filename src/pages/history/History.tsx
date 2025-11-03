@@ -35,7 +35,7 @@ function History() {
         </h3>
         <div className="absolute min-w-fit top-12 left-0 flex flex-col text-sm gap-2">
           <h4 className="text-xs font-bold">{t("Menu.history.click_year")}</h4>
-          <div className="font-normal grid grid-cols-3 gap-x-4 gap-y-2">
+          <div className="font-normal grid grid-cols-3 gap-x-8 gap-y-2">
             {historyYears.map((year, index) => (
               <Button
                 onClick={() => {
