@@ -1,18 +1,10 @@
 import Menu from "@/components/Menu";
 import LanguageSelector from "./components/LanguageSelector";
 import { Link, Outlet } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "./components/ui/input-group";
-import { Search } from "lucide-react";
 import Footer from "./components/Footer";
 import SearchBar from "./components/SearchBar";
 
 function App() {
-  const { t } = useTranslation();
   return (
     <>
       <div className="w-full py-12 px-12 xl:px-36 2xl:px-64 h-full flex flex-col">
