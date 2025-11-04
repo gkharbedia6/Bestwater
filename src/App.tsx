@@ -1,13 +1,15 @@
-import Menu from "@/components/Menu";
+// import Menu from "@/components/Menu";
 import LanguageSelector from "./components/LanguageSelector";
-import { Link, Outlet } from "react-router-dom";
-import Footer from "./components/Footer";
-import SearchBar from "./components/SearchBar";
+// import { Link, Outlet } from "react-router-dom";
+// import Footer from "./components/Footer";
+// import SearchBar from "./components/SearchBar";
+
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
-    <>
-      <div className="w-full py-12 px-12 xl:px-36 2xl:px-64 h-full flex flex-col">
+    <div className="w-full h-full flex relative items-center justify-center min-h-screen flex-col gap-2">
+      {/* <div className="w-full py-12 px-12 xl:px-36 2xl:px-64 h-full flex flex-col">
         <div className="w-full h-fit flex flex-col">
           <div className="w-full flex flex-col-reverse xl:flex-row justify-between items-start xl:items-center gap-4">
             <Link
@@ -28,7 +30,6 @@ function App() {
               </div>
             </Link>
 
-            {/* Right side — Language Selector */}
             <div className="w-full flex justify-end">
               <LanguageSelector />
             </div>
@@ -43,8 +44,16 @@ function App() {
         </div>
         <Outlet />
       </div>
-      <Footer />
-    </>
+      <Footer /> */}
+
+      <div className="w-full flex justify-end absolute top-20 right-20">
+        <LanguageSelector />
+      </div>
+      <Gallery />
+      <h1 className="text-2xl font-bold animate-pulse">
+        Weebsite Under Construction...
+      </h1>
+    </div>
   );
 }
 
