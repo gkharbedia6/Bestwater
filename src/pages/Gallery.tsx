@@ -24,7 +24,7 @@ function Gallery() {
   }, []);
 
   return (
-    <div>
+    <div className="my-6 md:my-0">
       <p
         className={cn("font-bold text-3xl", {
           "font-ge": storedLang === "ge",
@@ -34,7 +34,7 @@ function Gallery() {
         {t("Menu.gallery.title")}
       </p>
       <div className="flex flex-col gap-8 w-full max-w-7xl py-8">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6">
+        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end gap-6">
           <div className="flex-1 flex flex-col items-center text-center gap-2">
             <p className="text-base font-semibold mt-3 max-w-[90%]">
               {t("Menu.gallery.items.videoOne.title")}

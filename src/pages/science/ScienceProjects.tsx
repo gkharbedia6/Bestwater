@@ -9,9 +9,9 @@ function ScienceProjects() {
   });
 
   return (
-    <div className="px-4 max-w-[70%] flex flex-col items-start justify-start gap-4">
+    <div className="px-4 w-full md:max-w-[70%] flex flex-col items-start justify-start gap-4">
       <h3
-        className={cn("text-2xl font-bold", {
+        className={cn("text-lg md:text-2xl font-bold", {
           "font-ge": storedLang === "ge",
           "font-en-ru": storedLang !== "ge",
         })}

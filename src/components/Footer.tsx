@@ -21,7 +21,7 @@ function Footer() {
         "bg-accent min-h-[400px] w-full py-12 px-12 xl:px-36 2xl:px-64 relative"
       )}
     >
-      <div className="flex flex-row justify-center gap-24">
+      <div className="flex flex-col md:flex-row justify-center gap-12 md:gap-24">
         <div className="flex flex-col justify-start items-start">
           <h3
             className={cn("font-bold", {
@@ -135,7 +135,7 @@ function Footer() {
           </TooltipContent>
         </Tooltip>
       </p>
-      <div className="absolute bottom-6 right-12 xl:right-36 2xl:right-64">
+      <div className="hidden md:block absolute bottom-6 right-12 xl:right-36 2xl:right-64">
         <LanguageSelector />
       </div>
     </div>

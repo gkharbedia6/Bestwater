@@ -26,9 +26,9 @@ function Articles() {
   const year = location.pathname.split("/").pop();
 
   return (
-    <div className="px-4 max-w-[70%] flex flex-col items-start justify-start gap-4">
+    <div className="px-4 w-full md:max-w-[70%] flex flex-col items-start justify-start gap-4">
       <h3
-        className={cn("text-2xl font-bold", {
+        className={cn("text-lg md:text-2xl font-bold", {
           "font-ge": storedLang === "ge",
           "font-en-ru": storedLang !== "ge",
         })}
@@ -38,7 +38,7 @@ function Articles() {
       <h4 className="text-xs font-bold">
         {t("Menu.science.items.articles.click_year")}
       </h4>
-      <ul className="flex flex-row items-start justify-center gap-2">
+      <ul className="md:flex md:flex-row md:items-start grid grid-rows-2 grid-cols-6 md:justify-center gap-2">
         {Object.entries(articlesByYears).map(
           ([key, item]: [key: string, item: iArticleItem]) => (
             <Link

@@ -7,7 +7,7 @@ import SearchBar from "./components/SearchBar";
 function App() {
   return (
     <>
-      <div className="w-full py-12 px-12 xl:px-36 2xl:px-64 h-full flex flex-col">
+      <div className="md:w-full w-screen overflow-x-hidden py-12 px-8  xl:px-36 2xl:px-64 h-full flex flex-col">
         <div className="w-full h-fit flex flex-col">
           <div className="w-full flex flex-col-reverse xl:flex-row justify-between items-start xl:items-center gap-4">
             <Link
@@ -19,10 +19,10 @@ function App() {
                 src="/assets/logos/bestwater-main.png"
               />
               <div className="flex flex-col justify-center items-start">
-                <h1 className="text-5xl lg:text-7xl font-en-ru font-extrabold text-red-700">
+                <h1 className="text-3xl lg:text-7xl font-en-ru font-extrabold text-red-700">
                   BESTWATER
                 </h1>
-                <span className="text-lg italic font-light text-gray-600">
+                <span className="text-sm md:text-lg italic font-light text-gray-600">
                   Science for healthy life and beauty.
                 </span>
               </div>

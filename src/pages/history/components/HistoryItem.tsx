@@ -13,8 +13,8 @@ function HistoryItem({ year, item, index }: iHistoryItemProps) {
       className={cn(
         "h-fit rounded-sm relative gap-[8px] flex flex-col items-center bg-white shadow-md w-[400px] p-8 text-sm",
         {
-          "right-1/2 -translate-x-[30px]": index % 2 === 0,
-          "left-1/2 translate-x-[30px]": index % 2 !== 0,
+          "md:right-1/2 md:-translate-x-[30px]": index % 2 === 0,
+          "md:left-1/2 md:translate-x-[30px]": index % 2 !== 0,
         }
       )}
     >

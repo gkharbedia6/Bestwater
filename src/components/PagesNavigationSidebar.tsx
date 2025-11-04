@@ -17,19 +17,19 @@ function PagesNavigationSidebar({ title, urls }: iPagesNavigationSidebarProps) {
   // console.log(location);
 
   return (
-    <div className="flex flex-col items-start justify-start w-[20%] gap-4">
+    <div className="flex flex-col items-start justify-start md:w-[20%] gap-4">
       <p
-        className={cn("font-bold text-3xl", {
+        className={cn("font-bold text-xl md:text-3xl", {
           "font-ge": storedLang === "ge",
           "font-en-ru": storedLang !== "ge",
         })}
       >
         {title}
       </p>
-      <ul className="flex flex-col gap-2">
+      <ul className="md:flex grid grid-cols-2  md:flex-col gap-2">
         {urls.map((url: any, index: number) => (
           <Link
-            className={cn("text-sm ", {
+            className={cn("text-xs md:text-sm ", {
               "pointer-events-none opacity-30": location.pathname.startsWith(
                 url[1].url
               ),

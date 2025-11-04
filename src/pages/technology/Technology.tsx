@@ -8,7 +8,7 @@ function Technology() {
   const scienceMenuItems = t("Menu.technology.items", { returnObjects: true });
 
   return (
-    <div className="w-full flex-row gap-10 pb-8 flex items-start justify-start">
+    <div className="w-full flex-col md:flex-row my-6 md:my-0 gap-10 pb-8 flex items-start justify-start">
       <PagesNavigationSidebar
         title={t("Menu.technology.title")}
         urls={Object.entries(scienceMenuItems)}
