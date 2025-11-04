@@ -29,17 +29,33 @@ export function useLocaleSearch(dataOverride?: any) {
     [bundle]
   );
 
-  // 3) Create Fuse instance
+  // // 3) Create Fuse instance
+  // const fuse = useMemo(() => {
+  //   return new Fuse(items, {
+  //     includeScore: true,
+  //     threshold: 0.0, // 0.0 exact, 0.3 good fuzzy, 0.6 very fuzzy
+  //     ignoreLocation: true,
+  //     keys: [
+  //       "title",
+  //       "heading",
+  //       "content",
+  //       // You can add "section" if you want queries like "filters"
+  //     ],
+  //   });
+  // }, [items]);
+
   const fuse = useMemo(() => {
     return new Fuse(items, {
       includeScore: true,
-      threshold: 0.3, // 0.0 exact, 0.3 good fuzzy, 0.6 very fuzzy
+      shouldSort: true,
+      threshold: 0.0, // smaller = more strict
       ignoreLocation: true,
+      minMatchCharLength: 2,
+      useExtendedSearch: true, // ✅ allow exact/regex/AND/OR matches
       keys: [
-        "title",
-        "heading",
-        "content",
-        // You can add "section" if you want queries like "filters"
+        { name: "title", weight: 0.5 },
+        { name: "heading", weight: 0.3 },
+        { name: "content", weight: 0.2 },
       ],
     });
   }, [items]);
