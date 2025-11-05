@@ -24,18 +24,18 @@ function History() {
 
   return (
     <div className="px-4 w-full flex flex-col items-start justify-start gap-4">
-      <div className="relative">
+      <div className="relative my-6 md:my-0 ">
         <h3
-          className={cn("text-2xl font-bold", {
+          className={cn("text-lg md:text-2xl font-bold", {
             "font-ge": storedLang === "ge",
             "font-en-ru": storedLang !== "ge",
           })}
         >
           {t("Menu.history.title")}
         </h3>
-        <div className="absolute min-w-fit top-12 left-0 flex flex-col text-sm gap-2">
+        <div className="md:absolute min-w-fit top-12 left-0 flex flex-col text-sm gap-2">
           <h4 className="text-xs font-bold">{t("Menu.history.click_year")}</h4>
-          <div className="font-normal grid grid-cols-3 gap-x-8 gap-y-2">
+          <div className="font-normal grid grid-cols-5 md:grid-cols-3 gap-x-8 gap-y-2">
             {historyYears.map((year, index) => (
               <Button
                 onClick={() => {
@@ -55,7 +55,7 @@ function History() {
       </div>
 
       <div className="w-full min-h-screen flex flex-col items-center gap-8 pb-8 justify-start">
-        <h4 className="mb-10 w-[50%] text-xl text-center font-bold">
+        <h4 className="mb-10 md:w-[50%] text-xl text-center font-bold">
           {t("Menu.history.heading")}
         </h4>
         <div className="relative">

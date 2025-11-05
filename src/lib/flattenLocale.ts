@@ -1,63 +1,240 @@
 // src/lib/search/flattenLocale.ts
-// Flattens your locale tree into an array of searchable items.
-// Tailored to your schema (Menu.filters.items + a few others you might add later).
 
 export type SearchItem = {
-  id: string; // stable key
-  url: string; // where to navigate
-  title?: string; // shown in results
-  heading?: string; // long heading (optional)
-  content?: string; // long text (optional)
-  section?: string; // e.g., "filters", "science", etc. (for grouping/labels)
+  id: string;
+  url: string;
+  title?: string;
+  heading?: string;
+  content?: string;
+  section?: string;
 };
 
+// ----------------- Helpers -----------------
+function isString(v: unknown): v is string {
+  return typeof v === "string" && v.trim().length > 0;
+}
+
+function stripTags(s: string): string {
+  return s.replace(/<[^>]*>/g, " ");
+}
+
+function normalize(s: string): string {
+  return s.replace(/\s+/g, " ").trim();
+}
+
+function join(...parts: Array<string | undefined>): string | undefined {
+  const str = parts.filter(isString).map(stripTags).join(" ");
+  return str ? normalize(str) : undefined;
+}
+
+function joinObjectContent(contentObj: any): string | undefined {
+  if (!contentObj || typeof contentObj !== "object") return undefined;
+  const allValues = Object.values(contentObj)
+    .filter(isString)
+    .map(stripTags)
+    .join(" ");
+  return allValues ? normalize(allValues) : undefined;
+}
+
+function get(obj: any, path: string, fallback?: any) {
+  return path.split(".").reduce((acc, key) => acc?.[key], obj) ?? fallback;
+}
+
+// ----------------- Main -----------------
 export function flattenLocaleBundle(bundle: any): SearchItem[] {
   const items: SearchItem[] = [];
 
-  // ----- Filters (Menu.filters.items) -----
-  const filters = bundle?.Menu?.filters?.items ?? {};
-  Object.entries<any>(filters).forEach(([key, value]) => {
+  // ===== 1) FILTERS =====
+  const filtersItems = get(bundle, "Menu.filters.items", {});
+  for (const [key, node] of Object.entries<any>(filtersItems)) {
     items.push({
       id: `filters:${key}`,
-      url: value?.url ?? "/",
-      title: value?.title,
-      // collect any heading/content variants you use
-      heading:
-        value?.heading ??
-        value?.headingOne ??
-        value?.headingTwo ??
-        value?.headingThree,
-      content:
-        value?.content ??
-        value?.contentOne ??
-        value?.contentTwo ??
-        value?.contentThree ??
-        "",
+      url: node?.url ?? "/",
+      title: isString(node?.title) ? normalize(node.title) : undefined,
+      heading: join(
+        node?.heading,
+        node?.headingOne,
+        node?.headingTwo,
+        node?.headingThree
+      ),
+      content: join(
+        node?.content,
+        node?.contentOne,
+        node?.contentTwo,
+        node?.contentThree
+      ),
       section: "filters",
     });
-  });
+  }
 
-  // ----- Science > Articles (optional – extend as needed) -----
-  const scienceArticlesBaseUrl = bundle?.Menu?.science?.items.articles.url;
-  const scienceArticles = bundle?.Menu?.science?.items.articles.items;
+  // ===== 2) SCIENCE ARTICLES =====
+  const articlesBaseUrl = get(bundle, "Menu.science.items.articles.url");
+  const articleYears = get(bundle, "Menu.science.items.articles.items", {});
 
-  Object.entries<any>(scienceArticles).forEach(([key, value]) => {
-    const articleUrl = `${scienceArticlesBaseUrl}/${key}`;
-    Object.entries<any>(value.items).forEach(([, value]) => {
+  for (const [yearKey, yearNode] of Object.entries<any>(articleYears)) {
+    const yearUrl = `${articlesBaseUrl}/${yearKey}`;
+    const yearItems = yearNode?.items ?? {};
+
+    for (const [articleKey, articleData] of Object.entries<any>(yearItems)) {
+      const contentText = joinObjectContent(articleData?.content);
       items.push({
-        id: `science:articles:${key}`,
-        url: articleUrl ?? "/",
-        title: value?.title,
-        // heading: value.content.lineOne,
-        content: value.content.lineOne + value.content.lineTwo,
-        section: "science",
+        id: `articles:${yearKey}:${articleKey}`,
+        url: yearUrl,
+        title: isString(articleData?.title)
+          ? normalize(articleData.title)
+          : undefined,
+        content: contentText,
+        section: `articles-${yearKey}`,
       });
+    }
+  }
+
+  // ===== 3) SCIENCE PROJECTS =====
+  const scienceProjects = get(
+    bundle,
+    "Menu.science.items.science_projects",
+    {}
+  );
+  if (scienceProjects && scienceProjects.content) {
+    const baseUrl = scienceProjects?.url ?? "/science/science-projects";
+
+    Object.entries<any>(scienceProjects.content).forEach(([key, value]) => {
+      items.push({
+        id: `science_projects:${key}`,
+        url: baseUrl,
+        title: isString(scienceProjects.title)
+          ? normalize(scienceProjects.title)
+          : "სამეცნიერო პროექტები",
+        heading: isString(scienceProjects.heading)
+          ? normalize(scienceProjects.heading)
+          : undefined,
+        content: isString(value) ? normalize(value) : undefined,
+        section: "science_projects",
+      });
+    });
+  }
+
+  // ===== 4) SCIENCE TEXTBOOKS =====
+  const textbooks = get(bundle, "Menu.science.items.textbooks", {});
+  if (Array.isArray(textbooks?.content)) {
+    const baseUrl = textbooks?.url ?? "/science/textbooks";
+    textbooks.content.forEach((book: any, idx: number) => {
+      items.push({
+        id: `textbooks:${book.number ?? idx + 1}`,
+        url: baseUrl,
+        title: join(book?.author, book?.textbook),
+        heading: isString(textbooks?.heading)
+          ? normalize(textbooks.heading)
+          : undefined,
+        content: join(book?.place, book?.textbook, book?.author),
+        section: "textbooks",
+      });
+    });
+  }
+
+  // ===== 5) SCIENCE PATENTS =====
+  const patents = get(bundle, "Menu.science.items.patents", {});
+  if (patents?.content) {
+    const baseUrl = patents?.url ?? "/science/patents";
+    Object.entries<any>(patents.content).forEach(([key, value]) => {
+      items.push({
+        id: `patents:${key}`,
+        url: baseUrl,
+        title: isString(patents?.title)
+          ? normalize(patents.title)
+          : "პატენტები",
+        heading: isString(patents?.heading)
+          ? normalize(patents.heading)
+          : undefined,
+        content: isString(value) ? normalize(value) : undefined,
+        section: "patents",
+      });
+    });
+  }
+
+  // ===== 6) SCIENCE CONFERENCES =====
+  const conferences = get(bundle, "Menu.science.items.conferences", {});
+  if (conferences?.content) {
+    const baseUrl = conferences?.url ?? "/science/conferences";
+    Object.entries<any>(conferences.content).forEach(([key, value]) => {
+      items.push({
+        id: `conferences:${key}`,
+        url: baseUrl,
+        title: isString(conferences?.title)
+          ? normalize(conferences.title)
+          : "კონფერენციები",
+        heading: isString(conferences?.heading)
+          ? normalize(conferences.heading)
+          : undefined,
+        content: isString(value) ? normalize(value) : undefined,
+        section: "conferences",
+      });
+    });
+  }
+
+  // ===== 7) TECHNOLOGY =====
+  const technologyItems = get(bundle, "Menu.technology.items", {});
+  Object.entries<any>(technologyItems).forEach(([key, node]) => {
+    items.push({
+      id: `technology:${key}`,
+      url: node?.url ?? "/technology",
+      title: isString(node?.title) ? normalize(node.title) : undefined,
+      heading: isString(node?.heading) ? normalize(node.heading) : undefined,
+      content: isString(node?.content) ? normalize(node.content) : undefined,
+      section: "technology",
     });
   });
 
-  // console.log(items);
+  // ===== 8) HISTORY =====
+  const history = get(bundle, "Menu.history", {});
+  if (history?.items) {
+    const baseUrl = history?.url ?? "/history";
 
-  // De-duplicate by id (defensive)
+    Object.entries<any>(history.items).forEach(([year, events]) => {
+      // Each year has an array of entries (content, image, heading)
+      events.forEach((entry: any, idx: number) => {
+        if (entry.type === "content" && Array.isArray(entry.content)) {
+          entry.content.forEach((line: string, i: number) => {
+            items.push({
+              id: `history:${year}:${idx}:${i}`,
+              url: baseUrl,
+              title: `${year} ${normalize(history.title ?? "ისტორია")}`,
+              heading: isString(history.heading)
+                ? normalize(history.heading)
+                : undefined,
+              content: normalize(line),
+              section: "history",
+            });
+          });
+        } else if (entry.type === "heading") {
+          items.push({
+            id: `history:${year}:${idx}:heading`,
+            url: baseUrl,
+            title: `${year} ${normalize(entry.content)}`,
+            heading: isString(entry.content)
+              ? normalize(entry.content)
+              : undefined,
+            section: "history",
+          });
+        }
+      });
+    });
+  }
+
+  // ===== 9) GALLERY =====
+  const galleryItems = get(bundle, "Menu.gallery.items", {});
+  Object.entries<any>(galleryItems).forEach(([key, node]) => {
+    items.push({
+      id: `gallery:${key}`,
+      url: "/gallery",
+      title: isString(node?.title) ? normalize(node.title) : undefined,
+      heading: "ვიდეო",
+      // content: `${node?.["video-url"] ?? ""} ${node?.["poster-url"] ?? ""}`,
+      section: "gallery",
+    });
+  });
+
+  // ===== Deduplicate =====
   const seen = new Set<string>();
   return items.filter((it) => {
     if (seen.has(it.id)) return false;

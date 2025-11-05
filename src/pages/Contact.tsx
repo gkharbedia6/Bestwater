@@ -62,11 +62,11 @@ function Contact() {
   }
 
   return (
-    <div className="flex flex-row items-start gap-10">
-      <div className="flex w-[50%] flex-col items-start justify-start gap-4">
-        <div className="flex flex-col w-[50%] gap-4">
+    <div className="flex flex-col md:flex-row items-start gap-10 my-6 md:my-0">
+      <div className="flex md:w-[50%] flex-col items-center md:items-start justify-center md:justify-start gap-4">
+        <div className="flex flex-col md:w-[50%] gap-4">
           <h3
-            className={cn("text-2xl font-bold", {
+            className={cn("text-lg md:text-2xl font-bold", {
               "font-ge": storedLang === "ge",
               "font-en-ru": storedLang !== "ge",
             })}
@@ -74,39 +74,41 @@ function Contact() {
             {t("Contact.info.title")}
           </h3>
           <ul className="flex flex-col gap-2 py-4">
-            <p className="text-sm pb-4 ">{t("Contact.info.content")}</p>
-            <a
-              href="tel:+995599077575"
-              className="flex flex-row items-center gap-3 cursor-pointer text-xs group"
-            >
-              <Phone
-                size={15}
-                className="text-sm group-hover:text-red-700 transition-colors duration-200"
-              />
-              <span className="text-sm group-hover:text-red-700 transition-colors duration-200">
-                +995 599077575
-              </span>
-            </a>
-            <a
-              href="mailto:75bibileishvili@gmail.com"
-              className="flex flex-row items-center gap-3 cursor-pointer text-xs group"
-            >
-              <Mail
-                size={15}
-                className="text-sm group-hover:text-red-700 transition-colors duration-200"
-              />
-              <span className="text-sm group-hover:text-red-700 transition-colors duration-200">
-                75bibileishvili@gmail.com
-              </span>
-            </a>
-            <p className="text-sm">{t("Contact.address")}</p>
+            <p className="text-sm pb-4">{t("Contact.info.content")}</p>
+            <div>
+              <a
+                href="tel:+995599077575"
+                className="flex flex-row items-center gap-3 cursor-pointer text-xs group"
+              >
+                <Phone
+                  size={15}
+                  className="text-sm group-hover:text-red-700 transition-colors duration-200"
+                />
+                <span className="text-sm group-hover:text-red-700 transition-colors duration-200">
+                  +995 599077575
+                </span>
+              </a>
+              <a
+                href="mailto:75bibileishvili@gmail.com"
+                className="flex flex-row items-center gap-3 cursor-pointer text-xs group"
+              >
+                <Mail
+                  size={15}
+                  className="text-sm group-hover:text-red-700 transition-colors duration-200"
+                />
+                <span className="text-sm group-hover:text-red-700 transition-colors duration-200">
+                  75bibileishvili@gmail.com
+                </span>
+              </a>
+              <p className="text-sm">{t("Contact.address")}</p>
+            </div>
           </ul>
         </div>
         <MapEmbed />
       </div>
-      <div className="w-[50%] flex flex-col gap-4">
+      <div className="w-full md:w-[50%] flex flex-col gap-4">
         <h3
-          className={cn("text-2xl font-bold", {
+          className={cn("text-lg md:text-2xl font-bold", {
             "font-ge": storedLang === "ge",
             "font-en-ru": storedLang !== "ge",
           })}

@@ -90,7 +90,7 @@ function Menu() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          <NavigationMenuItem className="hidden md:block">
+          <NavigationMenuItem>
             <NavigationMenuTrigger>
               {t("Menu.technology.title")}
             </NavigationMenuTrigger>

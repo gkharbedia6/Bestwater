@@ -35,7 +35,7 @@ export default function SearchBar() {
 
   return (
     <div className="relative w-full xl:w-fit">
-      <div className="flex items-center w-full justify-end xl:w-fit">
+      <div className="flex items-center w-full justify-center md:justify-end xl:w-fit">
         <InputGroup className="w-[300px]">
           <InputGroupInput
             placeholder={t("Search.title")}
