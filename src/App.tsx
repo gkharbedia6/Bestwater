@@ -51,7 +51,7 @@ function App() {
       </div>
       <Gallery />
       <h1 className="text-2xl font-bold animate-pulse">
-        Weebsite Under Construction...
+        Weebsite Under Construction ...
       </h1>
     </div>
   );
