@@ -8,7 +8,7 @@ import Gallery from "./pages/Gallery";
 
 function App() {
   return (
-    <div className="w-full h-full flex relative items-center justify-center min-h-screen flex-col gap-2">
+    <div className="w-full h-full flex relative items-center justify-center min-h-screen p-12 flex-col gap-2">
       {/* <div className="w-full py-12 px-12 xl:px-36 2xl:px-64 h-full flex flex-col">
         <div className="w-full h-fit flex flex-col">
           <div className="w-full flex flex-col-reverse xl:flex-row justify-between items-start xl:items-center gap-4">
@@ -46,7 +46,7 @@ function App() {
       </div>
       <Footer /> */}
 
-      <div className="w-full flex justify-end absolute top-20 right-20">
+      <div className="w-full flex justify-end md:-8 mb-5">
         <LanguageSelector />
       </div>
       <Gallery />
