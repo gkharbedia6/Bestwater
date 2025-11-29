@@ -1,7 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import filterOne from "/assets/images/landing/filterOne.jpg";
 import filterTwo from "/assets/images/landing/filterTwo.jpg";
-import finger from "/assets/images/landing/finger.jpg";
 import ReactBeforeSliderComponent from "react-before-after-slider-component";
 import "react-before-after-slider-component/dist/build.css";
 import { useTranslation } from "react-i18next";
