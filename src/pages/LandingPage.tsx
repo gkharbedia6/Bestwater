@@ -6,6 +6,7 @@ import ReactBeforeSliderComponent from "react-before-after-slider-component";
 import "react-before-after-slider-component/dist/build.css";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import girl from "/assets/images/landing/girl.jpg";
 import {
   ArrowRightIcon,
   ArrowUpRightIcon,
@@ -144,15 +145,15 @@ export default function LandingPage() {
         <Separator className="my-8 xl:my-12" />
         <div className="pt-4 relative">
           <img
-            src={finger}
+            src={girl}
             alt="Image"
-            className="h-[300px] w-full object-cover object-top"
+            className="h-[350px] w-full object-cover object-middle"
           />
           <div className="absolute top-20 left-10 flex gap-7 flex-col">
             <p className="text-sm md:text-md lg:text-xl font-ge text-red-700">
               {t("Landing.finger_image.title")}
             </p>
-            <p className="text-white text-xs lg:text-lg">
+            <p className="text-white text-xs lg:text-3xl">
               {t("Landing.finger_image.description")}
             </p>
           </div>
