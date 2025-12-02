@@ -1196,7 +1196,7 @@
     "history": {
       "title": "History",
       "url": "/history",
-      "heading": "The history of creation and development of the Engineering Institute of Membrane Technologies at GTU, as well as the history and development of the Ltd.“Membrane – 75” and Ltd. “Bestwater” since 1971.",
+      "heading": "The history of creation and development of the Engineering Institute of Membrane Technologies at GTU, as well as the history and development of the Ltd. “Bestwater” since 1971.",
       "click_year": "Click the year:",
       "back_button": "Back to top",
       "items": {
@@ -1870,7 +1870,7 @@
     "description": "Results"
   },
   "Landing": {
-    "filterComparison": "მემბრანულ ფილტრში გაფილტრული ქალაქის ონკანის წყალი",
+    "filterComparison": "Filtered municipal tap water in a membrane filter",
     "welcome": "Welcome",
     "head_of_project": {
       "title": "Project Leader",
@@ -1890,8 +1890,8 @@
       }
     },
     "finger_image": {
-      "title": "მემბრანული ტექნოლოგიების საინჟინრო ინსტიტუტი",
-      "description": "მეცნიერება ჯანმრთელი ცხოვრების და სილამაზისთვის"
+      "title": "Institute of Membrane Technology Engineering",
+      "description": "Science for a healthy life and beauty"
     },
     "contact_us": {
       "title": "Contact Us",
@@ -1914,8 +1914,7 @@
   },
   "Contact": {
     "info": {
-      "title": "Information",
-      "content": "რამე ინფორმაცია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია რამე ინფორმატია."
+      "title": "Information"
     },
     "address": "Mukhran Machavariani 63/3, Tbilisi",
     "form": {

@@ -33,7 +33,7 @@ export default function LandingPage() {
           currentPercentPosition={50}
           firstImage={{ imageUrl: filterTwo }}
           secondImage={{ imageUrl: filterOne }}
-          delimiterColor="white" // your red-700
+          delimiterColor="white"
           delimiterIconStyles={{
             backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
               '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-horizontal-icon lucide-move-horizontal"><path d="m18 8 4 4-4 4"/><path d="M2 12h20"/><path d="m6 8-4 4 4 4"/></svg>'
@@ -42,8 +42,10 @@ export default function LandingPage() {
             backgroundPosition: "center",
             backgroundSize: "100%",
             backgroundColor: "white",
-            border: "3px solid white",
+            border: "8px solid white",
             borderRadius: "50%",
+            width: "40px",
+            height: "40px",
           }}
         />
       </div>
@@ -79,16 +81,13 @@ export default function LandingPage() {
               </TooltipContent>
             </Tooltip>
             <div className="flex flex-row gap-4 pt-4">
-              {/* <a
-                href="/assets/documents/Giorgi_Bibileishvili_CV_En.pdf"
-                download
-                className="text-blue-600 hover:underline"
-              >
-                📄 CV (English)
-              </a> */}
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a href={t("Landing.head_of_project.items.CV.url")} download>
+                  <a
+                    href={t("Landing.head_of_project.items.CV.url")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button
                       variant={"outline"}
                       className="flex flex-row items-center gap-1 cursor-pointer"
@@ -106,7 +105,8 @@ export default function LandingPage() {
                 <TooltipTrigger asChild>
                   <a
                     href={t("Landing.head_of_project.items.works.url")}
-                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Button
                       variant={"outline"}
@@ -123,14 +123,6 @@ export default function LandingPage() {
                   <p>{t("Landing.head_of_project.items.works.tooltip")}</p>
                 </TooltipContent>
               </Tooltip>
-
-              {/* <a
-                href="/assets/documents/Giorgi_Bibileishvili_Works_En.pdf"
-                download
-                className="text-blue-600 hover:underline"
-              >
-                🧠 Works (English)
-              </a> */}
             </div>
           </div>
           <div className="flex justify-center lg:justify-end mt-12">

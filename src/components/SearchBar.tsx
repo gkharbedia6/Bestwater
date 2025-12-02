@@ -6,7 +6,7 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/components/ui/input-group"; // adjust paths
+} from "@/components/ui/input-group";
 import { Search } from "lucide-react";
 import { useLocaleSearch } from "@/lib/hooks/useLocaleSearch";
 
@@ -18,7 +18,6 @@ export default function SearchBar() {
   const [open, setOpen] = useState(false);
   const [results, setResults] = useState<ReturnType<typeof search>>([]);
 
-  // debounce
   const debouncedQuery = useDebounced(query, 300);
 
   useEffect(() => {
@@ -28,10 +27,9 @@ export default function SearchBar() {
       return;
     }
 
-    // call once per query
     setResults(search(debouncedQuery));
     setOpen(true);
-  }, [debouncedQuery]); // remove `search` here
+  }, [debouncedQuery]);
 
   return (
     <div className="relative w-full xl:w-fit">
@@ -57,7 +55,7 @@ export default function SearchBar() {
       {open && results.length > 0 && (
         <div
           className="absolute right-0 mt-2 w-[500px] max-h-[60vh] overflow-auto rounded-xl border bg-background shadow-lg z-50"
-          onMouseDown={(e) => e.preventDefault()} // keep focus
+          onMouseDown={(e) => e.preventDefault()}
         >
           <ul className="divide-y">
             {results.map(({ item }, idx) => {
@@ -90,7 +88,6 @@ export default function SearchBar() {
   );
 }
 
-// tiny debounce hook
 function useDebounced<T>(value: T, delay = 300) {
   const [v, setV] = useState(value);
   useEffect(() => {

@@ -10,15 +10,14 @@ import { useEffect, useState } from "react";
 
 function LanguageSelector() {
   const { i18n } = useTranslation();
-  const [languagePreference, setLanguagePreference] = useState("ge");
+  const [languagePreference, setLanguagePreference] = useState("en");
 
   useEffect(() => {
     const storedLang = localStorage.getItem("i18nextLng");
-    const langToSet = storedLang || "ge";
+    const langToSet = storedLang || "en";
     setLanguagePreference(langToSet);
     i18n.changeLanguage(langToSet);
 
-    // Listen to global language change
     const handleLangChange = (lng: string) => setLanguagePreference(lng);
     i18n.on("languageChanged", handleLangChange);
 

@@ -23,24 +23,24 @@ function Menu() {
   });
 
   return (
-    <nav className="flex justify-start xl:justify-center items-center py-8 relative z-10">
+    <nav className="flex justify-start 2xl:justify-center items-center py-8 relative z-10">
       <NavigationMenu viewport={isMobile}>
         <NavigationMenuList className="flex-wrap">
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
+              className={navigationMenuTriggerStyle() + " text-md"}
             >
               <Link to={t("Menu.home.url")}>{t("Menu.home.title")}</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger>
+            <NavigationMenuTrigger className="text-md">
               {t("Menu.filters.title")}
             </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-1 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+            <NavigationMenuContent className="bg-accent">
+              <ul className="grid gap-1 sm:w-[400px]  md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {Object.entries(filtersMenuItems).map(
                   ([key, menuItem]: [
                     key: string,
@@ -49,12 +49,13 @@ function Menu() {
                       url: string;
                     }
                   ]) => (
-                    <NavigationMenuLink asChild key={key}>
+                    <NavigationMenuLink
+                      asChild
+                      key={key}
+                      className="hover:bg-neutral-200 text-md"
+                    >
                       <Link to={menuItem.url}>
                         <div className="font-medium">{menuItem.title}</div>
-                        {/* <div className="text-muted-foreground">
-                        Browse all components in the library.
-                      </div> */}
                       </Link>
                     </NavigationMenuLink>
                   )
@@ -63,10 +64,10 @@ function Menu() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>
+            <NavigationMenuTrigger className="text-md">
               {t("Menu.science.title")}
             </NavigationMenuTrigger>
-            <NavigationMenuContent>
+            <NavigationMenuContent className="bg-accent">
               <ul className="grid gap-1 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {Object.entries(scienceMenuItems).map(
                   ([key, menuItem]: [
@@ -76,12 +77,13 @@ function Menu() {
                       url: string;
                     }
                   ]) => (
-                    <NavigationMenuLink asChild key={key}>
+                    <NavigationMenuLink
+                      asChild
+                      key={key}
+                      className="hover:bg-neutral-200 text-md"
+                    >
                       <Link to={menuItem.url}>
                         <div className="font-medium">{menuItem.title}</div>
-                        {/* <div className="text-muted-foreground">
-                        Browse all components in the library.
-                      </div> */}
                       </Link>
                     </NavigationMenuLink>
                   )
@@ -91,10 +93,10 @@ function Menu() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger>
+            <NavigationMenuTrigger className="text-md">
               {t("Menu.technology.title")}
             </NavigationMenuTrigger>
-            <NavigationMenuContent>
+            <NavigationMenuContent className="bg-accent">
               <ul className="grid w-[300px] gap-1">
                 {Object.entries(technologyMenuItems).map(
                   ([key, menuItem]: [
@@ -104,12 +106,13 @@ function Menu() {
                       url: string;
                     }
                   ]) => (
-                    <NavigationMenuLink asChild key={key}>
+                    <NavigationMenuLink
+                      asChild
+                      key={key}
+                      className="hover:bg-neutral-200 text-md"
+                    >
                       <Link to={menuItem.url}>
                         <div className="font-medium">{menuItem.title}</div>
-                        {/* <div className="text-muted-foreground">
-                        Browse all components in the library.
-                      </div> */}
                       </Link>
                     </NavigationMenuLink>
                   )
@@ -120,7 +123,7 @@ function Menu() {
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
+              className={navigationMenuTriggerStyle() + " text-md"}
             >
               <Link to={t("Menu.history.url")}>{t("Menu.history.title")}</Link>
             </NavigationMenuLink>
@@ -128,7 +131,7 @@ function Menu() {
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
+              className={navigationMenuTriggerStyle() + " text-md"}
             >
               <Link to={t("Menu.gallery.url")}>{t("Menu.gallery.title")}</Link>
             </NavigationMenuLink>
@@ -136,7 +139,7 @@ function Menu() {
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
+              className={navigationMenuTriggerStyle() + " text-md"}
             >
               <Link to={t("Menu.contact.url")}>{t("Menu.contact.title")}</Link>
             </NavigationMenuLink>

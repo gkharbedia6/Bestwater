@@ -32,10 +32,10 @@ function App() {
               <LanguageSelector />
             </div>
           </div>
-          <div className="flex flex-col xl:flex-row justify-between">
+          <div className="flex flex-col 2xl:flex-row justify-between">
             <Menu />
 
-            <div className="flex items-center w-full justify-end xl:w-fit">
+            <div className="flex items-center w-full justify-end mb-10 2xl:mb-0 xl:w-fit">
               <SearchBar />
             </div>
           </div>

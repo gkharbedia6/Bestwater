@@ -73,8 +73,7 @@ function Contact() {
           >
             {t("Contact.info.title")}
           </h3>
-          <ul className="flex flex-col gap-2 py-4">
-            <p className="text-sm pb-4">{t("Contact.info.content")}</p>
+          <ul className="flex flex-col gap-2 pb-4">
             <div>
               <a
                 href="tel:+995599077575"

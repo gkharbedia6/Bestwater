@@ -3,18 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 
 interface iPagesNavigationSidebarProps {
   title: string;
-  //   urls: {
-  //     title: string;
-  //     url: string;
-  //   }[];
+
   urls: any[];
 }
 
 function PagesNavigationSidebar({ title, urls }: iPagesNavigationSidebarProps) {
   const storedLang = localStorage.getItem("i18nextLng");
   const location = useLocation();
-
-  // console.log(location);
 
   return (
     <div className="flex flex-col items-start justify-start md:w-[20%] gap-4">
@@ -26,7 +21,7 @@ function PagesNavigationSidebar({ title, urls }: iPagesNavigationSidebarProps) {
       >
         {title}
       </p>
-      <ul className="md:flex grid grid-cols-2  md:flex-col gap-2">
+      <ul className="md:flex grid grid-cols-2  md:flex-col gap-3">
         {urls.map((url: any, index: number) => (
           <Link
             className={cn("text-xs md:text-sm ", {

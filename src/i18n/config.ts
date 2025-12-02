@@ -15,8 +15,8 @@ i18n
       ge: { translation: ge },
       ru: { translation: ru },
     },
-    lng: localStorage.getItem("i18nextLng") || "ge",
-    fallbackLng: "ge",
+    lng: localStorage.getItem("i18nextLng") || "en",
+    fallbackLng: "en",
     interpolation: { escapeValue: false },
     detection: {
       order: ["localStorage", "htmlTag"],
